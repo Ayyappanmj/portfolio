@@ -1,26 +1,98 @@
-@import "tailwindcss";
+/* stylelint-disable at-rule-no-unknown */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* stylelint-enable at-rule-no-unknown */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 248 250 252;
+  --foreground: 15 23 42;
+  --muted: 71 85 105;
+  --card: 255 255 255;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --background: 2 6 23;
+  --foreground: 226 232 240;
+  --muted: 148 163 184;
+  --card: 15 23 42;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(var(--background));
+  color: rgb(var(--foreground));
+  overflow-x: hidden;
+}
+
+/* Selection */
+::selection {
+  background: rgba(34, 211, 238, 0.35);
+  color: white;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #3b82f6, #a855f7, #22d3ee);
+  border-radius: 999px;
+}
+
+/* Glass effect */
+.glass {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(15, 23, 42, 0.55);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(18px);
+}
+
+.dark .glass {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(90deg, #60a5fa, #c084fc, #22d3ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Section spacing */
+.section-padding {
+  padding: 6rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 7rem 2rem;
+  }
+}
+
+/* Focus */
+.focus-ring:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.65);
+}
+
+/* Reduce motion */
+.reduce-motion * {
+  animation: none !important;
+  transition: none !important;
 }
