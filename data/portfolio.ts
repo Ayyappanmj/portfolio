@@ -81,10 +81,50 @@ export const achievements = [
   { value: 12, label: "Production Projects", icon: FaStar, suffix: "+" },
   { value: 25, label: "Core Skills Mastered", icon: FaBrain, suffix: "+" },
   { value: 3, label: "Internships Completed", icon: FaToolbox, suffix: "" },
-  { value: 12, label: "Certifications", icon: FaCertificate, suffix: "+" },
+  { value: 17, label: "Certifications", icon: FaCertificate, suffix: "+" },
 ];
 
 export const certifications = [
+  {
+    name: "Developing in Agentic AI Systems Part 1 of 2",
+    issuer: "Microsoft",
+    date: "October 2026",
+    tasks: "Architectural foundations of agentic AI systems, autonomous task planning, and LLM reasoning loops.",
+    image: "/certificates/ms-agentic-ai-part1.jpg",
+    verify: "Signed by Satya Nadella • Microsoft",
+  },
+  {
+    name: "Developing in Agentic AI Systems Part 2 of 2",
+    issuer: "Microsoft",
+    date: "October 2026",
+    tasks: "Advanced multi-agent orchestration, tool integration, error recovery, and autonomous execution pipelines.",
+    image: "/certificates/ms-agentic-ai-part2.jpg",
+    verify: "Signed by Satya Nadella • Microsoft",
+  },
+  {
+    name: "Introduction to End-to-End Analytics using Microsoft Fabric",
+    issuer: "Microsoft",
+    date: "September 2026",
+    tasks: "Unified enterprise lakehouse architecture, data ingestion, pipeline modeling, and end-to-end Fabric analytics.",
+    image: "/certificates/ms-fabric-analytics.jpg",
+    verify: "Signed by Satya Nadella • Microsoft",
+  },
+  {
+    name: "Get Started Building with Power BI",
+    issuer: "Microsoft",
+    date: "September 2026",
+    tasks: "Interactive data visualization, DAX measures, relational data modeling, and business intelligence reporting.",
+    image: "/certificates/ms-power-bi.jpg",
+    verify: "Signed by Satya Nadella • Microsoft",
+  },
+  {
+    name: "Introduction to Cloud Infrastructure: Describe Cloud Concepts",
+    issuer: "Microsoft",
+    date: "September 2026",
+    tasks: "Cloud computing architectures, high availability, fault tolerance, scalability, and IaaS/PaaS/SaaS models.",
+    image: "/certificates/ms-cloud-infrastructure.jpg",
+    verify: "Signed by Satya Nadella • Microsoft",
+  },
   {
     name: "AI Fluency: Framework and foundations",
     issuer: "Claude Academy (Anthropic)",
