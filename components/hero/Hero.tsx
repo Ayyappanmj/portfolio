@@ -2,10 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FaArrowRight, FaDownload } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 import { profile, techIcons, typingRoles } from "@/data/portfolio";
 import TypingText from "./TypingText";
 import ParticleBackground from "./ParticleBackground";
+
 export default function Hero() {
   return (
     <section
@@ -34,13 +35,6 @@ export default function Hero() {
               className="focus-ring inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-400 px-6 py-3 font-semibold text-white shadow-glow transition hover:scale-105"
             >
               Hire Me <FaArrowRight />
-            </Link>
-            <Link
-              href={profile.resume}
-              target="_blank"
-              className="focus-ring inline-flex items-center gap-3 rounded-full border border-white/15 px-6 py-3 font-semibold transition hover:border-cyan-400 hover:text-cyan-400"
-            >
-              Download Resume <FaDownload />
             </Link>
           </div>
           <div className="mt-8 flex gap-4">
