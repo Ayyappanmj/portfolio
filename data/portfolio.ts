@@ -81,7 +81,7 @@ export const achievements = [
   { value: 12, label: "Production Projects", icon: FaStar, suffix: "+" },
   { value: 25, label: "Core Skills Mastered", icon: FaBrain, suffix: "+" },
   { value: 3, label: "Internships Completed", icon: FaToolbox, suffix: "" },
-  { value: 7, label: "Certifications", icon: FaCertificate, suffix: "" },
+  { value: 12, label: "Certifications", icon: FaCertificate, suffix: "+" },
 ];
 
 export const certifications = [
@@ -100,6 +100,46 @@ export const certifications = [
     tasks: "Completed ~300 hours of coursework in algorithms, data structures, and Python computation.",
     image: "/certificates/freecodecamp-python.jpg",
     verify: "https://freecodecamp.org/certification/fcc3de4c1d3-3c18-492e-85a4-032da9f242d0/scientific-computing-with-python-v7",
+  },
+  {
+    name: "Legacy JavaScript Algorithms and Data Structures",
+    issuer: "freeCodeCamp",
+    date: "August 2026",
+    tasks: "Completed ~300 hours of coursework in JavaScript algorithms, OOP, FP, and complex data structures.",
+    image: "/certificates/freecodecamp-js.jpg",
+    verify: "https://freecodecamp.org/certification/fcc3de4c1d3-3c18-492e-85a4-032da9f242d0/javascript-algorithms-and-data-structures",
+  },
+  {
+    name: "Python Essentials 1",
+    issuer: "Cisco Networking Academy & Python Institute",
+    date: "October 2026",
+    tasks: "Fundamental Python programming concepts, data collections, conditionals, loops, functions, and modules.",
+    image: "/certificates/cisco-python-essentials.jpg",
+    verify: "Cert ID: 832864df-a15a-4f58-a597-faf699a09b51",
+  },
+  {
+    name: "Prompt Like an Engineer",
+    issuer: "Cisco Networking Academy",
+    date: "September 2026",
+    tasks: "Engineering-grade prompt design, chain-of-thought methodologies, system prompts, and AI task orchestration.",
+    image: "/certificates/cisco-prompt-engineer.jpg",
+    verify: "Cert ID: 7ca0e31f-2c03-4742-bf6e-8bb35eb5f5c0",
+  },
+  {
+    name: "Data Science Essentials with Python",
+    issuer: "Cisco Networking Academy",
+    date: "October 2026",
+    tasks: "Statistical data analysis, NumPy arrays, Pandas DataFrames, and data science methodology.",
+    image: "/certificates/cisco-data-science-python.jpg",
+    verify: "Cert ID: 61bf6313-2db2-43fe-b68d-788f3164d990",
+  },
+  {
+    name: "Data Analytics Essentials",
+    issuer: "Cisco Networking Academy",
+    date: "September 2026",
+    tasks: "Data analytics lifecycle, data transformation, visualization techniques, and business intelligence.",
+    image: "/certificates/cisco-data-analytics.jpg",
+    verify: "Cert ID: e9ff66eb-b53d-40da-b57b-be3b5da917ef",
   },
   {
     name: "GenAI Job Simulation",
