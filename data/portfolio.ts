@@ -81,7 +81,7 @@ export const achievements = [
   { value: 12, label: "Production Projects", icon: FaStar, suffix: "+" },
   { value: 25, label: "Core Skills Mastered", icon: FaBrain, suffix: "+" },
   { value: 3, label: "Internships Completed", icon: FaToolbox, suffix: "" },
-  { value: 17, label: "Certifications", icon: FaCertificate, suffix: "+" },
+  { value: 18, label: "Certifications", icon: FaCertificate, suffix: "+" },
 ];
 
 export const certifications = [
@@ -115,6 +115,14 @@ export const certifications = [
     date: "September 2026",
     tasks: "Interactive data visualization, DAX measures, relational data modeling, and business intelligence reporting.",
     image: "/certificates/ms-power-bi.jpg",
+    verify: "Signed by Satya Nadella • Microsoft",
+  },
+  {
+    name: "Write DAX Formulas for Semantic Models",
+    issuer: "Microsoft",
+    date: "September 2026",
+    tasks: "Authoring advanced DAX measures, calculated tables, filter context manipulation, and semantic data models.",
+    image: "/certificates/ms-write-dax.jpg",
     verify: "Signed by Satya Nadella • Microsoft",
   },
   {
