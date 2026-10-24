@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" fill="none">
+  <defs>
+    <radialGradient id="badgeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D97706" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#450A0A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Dark Wine Red Background -->
+  <rect width="800" height="600" fill="#4B0908"/>
+
+  <!-- Subtle glow -->
+  <circle cx="400" cy="270" r="280" fill="url(#badgeGlow)"/>
+
+  <!-- Circular Badge Outline Pattern -->
+  <polygon points="400,60 560,95 620,250 560,420 400,470 240,420 180,250 240,95" fill="#EAD5C3" stroke="#D4A373" stroke-width="3"/>
+
+  <!-- Compass Icon in Ribbon -->
+  <g transform="translate(365, 120)">
+    <circle cx="35" cy="35" r="32" fill="#F19970" stroke="#E07A5F" stroke-width="3"/>
+    <circle cx="35" cy="35" r="20" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+    <path d="M 28 42 L 35 22 L 42 28 L 35 48 Z" fill="#4B0908"/>
+  </g>
+
+  <!-- Badge Text -->
+  <text x="400" y="240" fill="#4B0908" font-family="'Times New Roman', Georgia, serif" font-size="36" font-weight="700" text-anchor="middle">AI Fluency:</text>
+  <text x="400" y="285" fill="#4B0908" font-family="'Times New Roman', Georgia, serif" font-size="36" font-weight="700" text-anchor="middle">Framework</text>
+  <text x="400" y="330" fill="#4B0908" font-family="'Times New Roman', Georgia, serif" font-size="34" font-weight="700" text-anchor="middle">and foundations</text>
+
+  <text x="400" y="380" fill="#78350F" font-family="system-ui, sans-serif" font-size="16" font-weight="500" text-anchor="middle">Presented to</text>
+  <text x="400" y="420" fill="#4B0908" font-family="'Times New Roman', Georgia, serif" font-size="28" font-weight="700" text-anchor="middle">Ayyappan M</text>
+
+  <!-- Claude Academy Logo Bottom Left -->
+  <g transform="translate(60, 525)">
+    <!-- Asterisk star -->
+    <text x="0" y="24" fill="#EAD5C3" font-size="32" font-family="system-ui, sans-serif">✳</text>
+    <text x="32" y="24" fill="#FFFFFF" font-family="'Times New Roman', Georgia, serif" font-size="24" font-weight="600">Claude Academy</text>
+  </g>
+
+  <!-- Date Bottom Right -->
+  <text x="740" y="548" fill="#FCD34D" font-family="system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="2" text-anchor="end">ISSUED OCTOBER 14, 2026</text>
+</svg>
