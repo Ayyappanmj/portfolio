@@ -24,11 +24,11 @@ const siteUrl =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Alex Carter | Full Stack Software Developer",
-    template: "%s | Alex Carter"
+    default: "AYYAPPAN M | Software Engineer & AI / Data Systems Developer",
+    template: "%s | AYYAPPAN M"
   },
   description:
-    "Modern personal portfolio of Alex Carter, a full stack software developer specializing in Next.js, React, TypeScript, cloud, and AI solutions.",
+    "Professional portfolio of AYYAPPAN M, a software engineer specializing in Python, AI agents, full-stack systems, and enterprise data analytics.",
   keywords: [
     "Software Developer",
     "Full Stack Developer",

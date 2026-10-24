@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" fill="none">
+  <defs>
+    <linearGradient id="ragBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071321"/>
+      <stop offset="50%" stop-color="#0E233D"/>
+      <stop offset="100%" stop-color="#060F1A"/>
+    </linearGradient>
+    <pattern id="ragGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#ragBg)"/>
+  <rect width="800" height="450" fill="url(#ragGrid)"/>
+
+  <circle cx="160" cy="140" r="140" fill="#06B6D4" opacity="0.12" filter="blur(65px)"/>
+  <circle cx="680" cy="300" r="160" fill="#3B82F6" opacity="0.12" filter="blur(70px)"/>
+
+  <!-- Outer Frame -->
+  <rect x="30" y="30" width="740" height="390" rx="18" fill="rgba(15, 23, 42, 0.7)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+
+  <!-- Window Header -->
+  <rect x="30" y="30" width="740" height="44" rx="18" fill="rgba(30, 41, 59, 0.8)"/>
+  <circle cx="56" cy="52" r="6" fill="#EF4444"/>
+  <circle cx="76" cy="52" r="6" fill="#F59E0B"/>
+  <circle cx="96" cy="52" r="6" fill="#10B981"/>
+  <text x="124" y="56" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" font-weight="500">rag-assistant :: faiss-bm25-hybrid :: ollama-grounded-generation</text>
+  <rect x="610" y="42" width="140" height="22" rx="11" fill="rgba(6, 182, 212, 0.15)" stroke="#06B6D4" stroke-width="1"/>
+  <text x="625" y="57" fill="#22D3EE" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Hybrid Retrieval</text>
+
+  <!-- Left: Hybrid Vector Search + BM25 Pipeline -->
+  <g transform="translate(60, 95)">
+    <rect x="0" y="0" width="370" height="255" rx="14" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="20" y="30" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Dual-Stream Hybrid Document Retrieval</text>
+    <text x="20" y="48" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">FAISS Semantic Vectors + BM25 Keyword Matching</text>
+
+    <!-- FAISS Branch -->
+    <rect x="20" y="65" width="155" height="60" rx="8" fill="rgba(6, 182, 212, 0.15)" stroke="#06B6D4" stroke-width="1"/>
+    <text x="97" y="88" fill="#22D3EE" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">FAISS Dense Index</text>
+    <text x="97" y="106" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">SentenceTransformers</text>
+
+    <!-- BM25 Branch -->
+    <rect x="195" y="65" width="155" height="60" rx="8" fill="rgba(59, 130, 246, 0.15)" stroke="#3B82F6" stroke-width="1"/>
+    <text x="272" y="88" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">BM25 Sparse Index</text>
+    <text x="272" y="106" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Exact Keyword &amp; Acronyms</text>
+
+    <!-- Reciprocal Rank Fusion & Reranking -->
+    <rect x="20" y="135" width="330" height="42" rx="8" fill="rgba(168, 85, 247, 0.15)" stroke="#A855F7" stroke-width="1"/>
+    <text x="185" y="156" fill="#C084FC" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">⚡ Reciprocal Rank Fusion (RRF) &amp; Rerank</text>
+    <text x="185" y="170" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Page-Level Metadata Chunking &amp; Citation Tracking</text>
+
+    <!-- Grounded Guardrail -->
+    <rect x="20" y="188" width="330" height="52" rx="8" fill="rgba(16, 185, 129, 0.12)" stroke="#10B981" stroke-width="1"/>
+    <text x="32" y="208" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="700">✓ Hallucination Guardrails &amp; Context-Only Prompting</text>
+    <text x="32" y="226" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="10">Zero Hallucinations • Strict Confidence Threshold Enforced</text>
+  </g>
+
+  <!-- Right: Q&A Output with Page Citations -->
+  <g transform="translate(455, 95)">
+    <rect x="0" y="0" width="290" height="255" rx="14" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="20" y="28" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Next.js UI &amp; Verified Citations</text>
+    <text x="20" y="46" fill="#22D3EE" font-family="system-ui, sans-serif" font-size="10">FASTAPI ASYNC STREAMING RESPONSE</text>
+
+    <rect x="15" y="60" width="260" height="50" rx="8" fill="rgba(30, 41, 59, 0.6)"/>
+    <text x="25" y="78" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">USER QUERY:</text>
+    <text x="25" y="96" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11" font-weight="600">"What are the quarterly SLA latency limits?"</text>
+
+    <rect x="15" y="118" width="260" height="72" rx="8" fill="rgba(30, 41, 59, 0.6)"/>
+    <text x="25" y="136" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="10" font-weight="600">ASSISTANT ANSWER:</text>
+    <text x="25" y="154" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="10">The SLA stipulates &lt; 50ms P99 latency for tier-1</text>
+    <text x="25" y="170" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="10">endpoints during standard business hours.</text>
+    <text x="25" y="184" fill="#34D399" font-family="system-ui, sans-serif" font-size="9" font-weight="600">[Source: SLA_Contract_2026.pdf • Page 14]</text>
+
+    <rect x="15" y="198" width="260" height="42" rx="8" fill="rgba(6, 182, 212, 0.12)" stroke="#06B6D4" stroke-width="0.8"/>
+    <text x="25" y="218" fill="#22D3EE" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Pydantic RAG Evaluation Score: 98.2%</text>
+    <text x="25" y="232" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9">Faithfulness: 1.0 • Citation Coverage: 100%</text>
+  </g>
+
+  <!-- Bottom Badges -->
+  <g transform="translate(60, 375)">
+    <rect x="0" y="0" width="85" height="26" rx="6" fill="rgba(6, 182, 212, 0.12)" stroke="#06B6D4" stroke-width="1"/>
+    <text x="42" y="17" fill="#22D3EE" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">FAISS</text>
+
+    <rect x="95" y="0" width="75" height="26" rx="6" fill="rgba(59, 130, 246, 0.12)" stroke="#3B82F6" stroke-width="1"/>
+    <text x="132" y="17" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">BM25</text>
+
+    <rect x="180" y="0" width="85" height="26" rx="6" fill="rgba(168, 85, 247, 0.12)" stroke="#A855F7" stroke-width="1"/>
+    <text x="222" y="17" fill="#C084FC" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">LangChain</text>
+
+    <rect x="275" y="0" width="85" height="26" rx="6" fill="rgba(16, 185, 129, 0.12)" stroke="#10B981" stroke-width="1"/>
+    <text x="317" y="17" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">FastAPI</text>
+
+    <rect x="370" y="0" width="85" height="26" rx="6" fill="rgba(244, 63, 94, 0.12)" stroke="#F43F5E" stroke-width="1"/>
+    <text x="412" y="17" fill="#F43F5E" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Next.js</text>
+
+    <rect x="465" y="0" width="75" height="26" rx="6" fill="rgba(245, 158, 11, 0.12)" stroke="#F59E0B" stroke-width="1"/>
+    <text x="502" y="17" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Ollama</text>
+  </g>
+</svg>

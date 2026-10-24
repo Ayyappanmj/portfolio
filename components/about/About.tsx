@@ -13,9 +13,9 @@ export default function About() {
         <div className="glass rounded-3xl p-8">
           <h3 className="font-poppins text-2xl font-bold">Professional Summary</h3>
           <p className="mt-5 leading-8 text-muted">
-            Hello! I'm Ayyappan M, an Information Technology graduate from Kerala, India, passionate about software development, Artificial Intelligence, and data-driven solutions. I enjoy building modern web applications and exploring new technologies that solve real-world problems.
-My technical skills include Python, Java, JavaScript, React.js, SQL, Flask, Power BI, Machine Learning, and AI technologies. I have developed projects in AI, web development, database management, and data analytics, strengthening both my technical and problem-solving abilities.
- I believe in continuous learning and enjoy taking on new challenges to improve my skills. My goal is to contribute to innovative projects, collaborate with talented teams, and grow as a Software Developer while creating impactful digital solutions.
+            I am an Information Technology engineer focused on architecting resilient backend systems, autonomous AI agents, and enterprise data analytics pipelines. My work includes designing production-shaped API gateways with Redis-backed Lua token-bucket rate limiting, multi-agent AI workflows for automated market intelligence, and production-grade RAG assistants using hybrid FAISS/BM25 retrieval with local Ollama inference. In data engineering, I have modeled data warehouses processing 500K+ transactional records with MySQL and Power BI, as well as sports analytics optimization platforms on PostgreSQL. With hands-on internship experience in data analytics and production Python engineering—enforcing rigorous TDD (pytest), profiling (cProfile), and GitHub Actions CI/CD—I build software that combines technical rigor, security, and measurable business impact.
+
+
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-white/10 p-5">

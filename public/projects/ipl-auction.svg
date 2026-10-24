@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" fill="none">
+  <defs>
+    <linearGradient id="iplBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B132B"/>
+      <stop offset="50%" stop-color="#1C2541"/>
+      <stop offset="100%" stop-color="#0B132B"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+    <pattern id="iplGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#iplBg)"/>
+  <rect width="800" height="450" fill="url(#iplGrid)"/>
+
+  <circle cx="200" cy="140" r="150" fill="#F59E0B" opacity="0.1" filter="blur(65px)"/>
+  <circle cx="650" cy="320" r="160" fill="#3B82F6" opacity="0.12" filter="blur(70px)"/>
+
+  <!-- Outer Card Frame -->
+  <rect x="30" y="30" width="740" height="390" rx="18" fill="rgba(15, 23, 42, 0.7)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+
+  <!-- Window Header -->
+  <rect x="30" y="30" width="740" height="44" rx="18" fill="rgba(30, 41, 59, 0.8)"/>
+  <circle cx="56" cy="52" r="6" fill="#EF4444"/>
+  <circle cx="76" cy="52" r="6" fill="#F59E0B"/>
+  <circle cx="96" cy="52" r="6" fill="#10B981"/>
+  <text x="124" y="56" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" font-weight="500">ipl-analytics :: k-means-clustering :: squad-optimizer</text>
+  <rect x="610" y="42" width="140" height="22" rx="11" fill="rgba(245, 158, 11, 0.15)" stroke="#F59E0B" stroke-width="1"/>
+  <text x="625" y="57" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Streamlit + Plotly</text>
+
+  <!-- Left Side: Radar / Scatter Cluster Visual -->
+  <g transform="translate(60, 95)">
+    <!-- Main Visual Box -->
+    <rect x="0" y="0" width="370" height="255" rx="14" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="20" y="30" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Player Role Clustering (K-Means)</text>
+    <text x="20" y="48" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Strike Rate vs Economy vs Consistency</text>
+
+    <!-- Cluster Grid -->
+    <line x1="40" y1="210" x2="340" y2="210" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+    <line x1="40" y1="70" x2="40" y2="210" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+
+    <!-- Cluster Dots -->
+    <!-- Power Hitters (Gold) -->
+    <circle cx="280" cy="100" r="5" fill="#F59E0B"/>
+    <circle cx="300" cy="115" r="6" fill="#FBBF24"/>
+    <circle cx="270" cy="120" r="4" fill="#F59E0B"/>
+    <circle cx="320" cy="90" r="5" fill="#F59E0B"/>
+    <text x="250" y="80" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Power Hitters</text>
+
+    <!-- Anchor Batsmen (Cyan) -->
+    <circle cx="160" cy="125" r="5" fill="#38BDF8"/>
+    <circle cx="140" cy="140" r="6" fill="#38BDF8"/>
+    <circle cx="180" cy="135" r="4" fill="#38BDF8"/>
+    <text x="120" y="115" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Anchors</text>
+
+    <!-- Death Bowlers (Purple) -->
+    <circle cx="80" cy="170" r="6" fill="#C084FC"/>
+    <circle cx="100" cy="185" r="5" fill="#A855F7"/>
+    <circle cx="120" cy="165" r="4" fill="#C084FC"/>
+    <text x="60" y="155" fill="#C084FC" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Death Bowlers</text>
+
+    <!-- All-Rounders (Green) -->
+    <circle cx="220" cy="150" r="7" fill="#34D399"/>
+    <circle cx="205" cy="165" r="5" fill="#10B981"/>
+    <circle cx="240" cy="160" r="6" fill="#34D399"/>
+    <text x="195" y="195" fill="#34D399" font-family="system-ui, sans-serif" font-size="10" font-weight="600">All-Rounders</text>
+  </g>
+
+  <!-- Right Side: Optimization & Budget Constraints -->
+  <g transform="translate(455, 95)">
+    <!-- Budget Optimization Panel -->
+    <rect x="0" y="0" width="290" height="120" rx="14" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="20" y="28" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Squad Budget Optimization</text>
+
+    <!-- Progress bar for budget -->
+    <text x="20" y="55" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Purse Cap: ₹100.0 Cr</text>
+    <text x="220" y="55" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Spent: ₹96.4 Cr</text>
+    <rect x="20" y="65" width="250" height="10" rx="5" fill="rgba(255,255,255,0.1)"/>
+    <rect x="20" y="65" width="241" height="10" rx="5" fill="url(#goldGrad)"/>
+
+    <text x="20" y="100" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Selected Squad: 25 Players • 8 Overseas</text>
+
+    <!-- Supabase & ML safeguards -->
+    <rect x="0" y="135" width="290" height="120" rx="14" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="20" y="163" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Supabase &amp; Data Pipeline</text>
+    <text x="20" y="188" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="11">• 500 MB Storage Safeguard Monitor</text>
+    <text x="20" y="208" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="11">• Historical Cricsheet Ball-by-Ball ETL</text>
+    <text x="20" y="228" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="11">• Chronologically Validated ML Valuations</text>
+  </g>
+
+  <!-- Bottom Badges -->
+  <g transform="translate(60, 375)">
+    <rect x="0" y="0" width="75" height="26" rx="6" fill="rgba(245, 158, 11, 0.12)" stroke="#F59E0B" stroke-width="1"/>
+    <text x="37" y="17" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Python</text>
+
+    <rect x="85" y="0" width="105" height="26" rx="6" fill="rgba(56, 189, 248, 0.12)" stroke="#38BDF8" stroke-width="1"/>
+    <text x="137" y="17" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Scikit-learn</text>
+
+    <rect x="200" y="0" width="95" height="26" rx="6" fill="rgba(52, 211, 153, 0.12)" stroke="#34D399" stroke-width="1"/>
+    <text x="247" y="17" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Supabase</text>
+
+    <rect x="305" y="0" width="95" height="26" rx="6" fill="rgba(192, 132, 252, 0.12)" stroke="#C084FC" stroke-width="1"/>
+    <text x="352" y="17" fill="#C084FC" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Streamlit</text>
+
+    <rect x="410" y="0" width="85" height="26" rx="6" fill="rgba(244, 63, 94, 0.12)" stroke="#F43F5E" stroke-width="1"/>
+    <text x="452" y="17" fill="#F43F5E" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Plotly</text>
+  </g>
+</svg>

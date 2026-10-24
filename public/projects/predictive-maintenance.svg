@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" fill="none">
+  <defs>
+    <linearGradient id="pmBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08141F"/>
+      <stop offset="50%" stop-color="#0C2336"/>
+      <stop offset="100%" stop-color="#050E17"/>
+    </linearGradient>
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="50%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+    <pattern id="pmGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#pmBg)"/>
+  <rect width="800" height="450" fill="url(#pmGrid)"/>
+
+  <circle cx="170" cy="140" r="140" fill="#06B6D4" opacity="0.12" filter="blur(65px)"/>
+  <circle cx="670" cy="310" r="150" fill="#10B981" opacity="0.12" filter="blur(70px)"/>
+
+  <!-- Outer Card Frame -->
+  <rect x="30" y="30" width="740" height="390" rx="18" fill="rgba(15, 23, 42, 0.7)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+
+  <!-- Window Header -->
+  <rect x="30" y="30" width="740" height="44" rx="18" fill="rgba(30, 41, 59, 0.8)"/>
+  <circle cx="56" cy="52" r="6" fill="#EF4444"/>
+  <circle cx="76" cy="52" r="6" fill="#F59E0B"/>
+  <circle cx="96" cy="52" r="6" fill="#10B981"/>
+  <text x="124" y="56" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" font-weight="500">predictive-maintenance :: time-series-mlops :: drift-monitoring</text>
+  <rect x="590" y="42" width="160" height="22" rx="11" fill="rgba(16, 185, 129, 0.15)" stroke="#10B981" stroke-width="1"/>
+  <text x="605" y="57" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600">CI/CD Retraining Active</text>
+
+  <!-- Left Side: Sensor Telemetry & Failure Hazard Curve -->
+  <g transform="translate(60, 95)">
+    <rect x="0" y="0" width="370" height="255" rx="14" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="20" y="30" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Industrial Sensor Telemetry &amp; Degradation</text>
+    <text x="20" y="48" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Vibration, Heat &amp; Pressure Time-Series Analysis</text>
+
+    <!-- Oscilloscope Grid Lines -->
+    <line x1="25" y1="130" x2="345" y2="130" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="2 2"/>
+    <line x1="25" y1="80" x2="345" y2="80" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    <line x1="25" y1="180" x2="345" y2="180" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+    <!-- Sensor Waveform Path -->
+    <path d="M 30 130 Q 55 105, 80 130 T 130 130 T 180 130 Q 205 95, 230 145 T 280 110 Q 300 60, 320 180 T 340 70" fill="none" stroke="url(#waveGrad)" stroke-width="2.5"/>
+
+    <!-- Hazard Threshold Indicator -->
+    <line x1="240" y1="65" x2="240" y2="200" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <rect x="245" y="70" width="95" height="20" rx="4" fill="rgba(239, 68, 68, 0.2)" stroke="#EF4444" stroke-width="0.8"/>
+    <text x="252" y="84" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Hazard Warning</text>
+
+    <!-- Metric pill -->
+    <rect x="25" y="210" width="145" height="30" rx="6" fill="rgba(6, 182, 212, 0.15)"/>
+    <text x="35" y="229" fill="#22D3EE" font-family="system-ui, sans-serif" font-size="11" font-weight="600">RUL: 42 Operating Hours</text>
+
+    <rect x="180" y="210" width="155" height="30" rx="6" fill="rgba(16, 185, 129, 0.15)"/>
+    <text x="190" y="229" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Model Accuracy: 94.8%</text>
+  </g>
+
+  <!-- Right Side: MLOps & Drift Pipeline -->
+  <g transform="translate(455, 95)">
+    <rect x="0" y="0" width="290" height="120" rx="14" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="20" y="28" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Data Drift &amp; Retraining Loop</text>
+    <text x="20" y="55" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="11">• Kolmogorov-Smirnov statistical test</text>
+    <text x="20" y="78" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="11">• Trigger: Concept / Covariate shift detected</text>
+    <text x="20" y="102" fill="#34D399" font-family="system-ui, sans-serif" font-size="11">✓ Zero Manual Pipeline Interventions</text>
+
+    <rect x="0" y="135" width="290" height="120" rx="14" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="20" y="163" fill="#C084FC" font-family="system-ui, sans-serif" font-size="13" font-weight="700">GitHub Actions Automation</text>
+    <text x="20" y="188" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="11">• Automated dataset re-partitioning</text>
+    <text x="20" y="208" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="11">• Time-series model re-training</text>
+    <text x="20" y="228" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="11">• Artifacts deployed to Render</text>
+  </g>
+
+  <!-- Bottom Badges -->
+  <g transform="translate(60, 375)">
+    <rect x="0" y="0" width="105" height="26" rx="6" fill="rgba(6, 182, 212, 0.12)" stroke="#06B6D4" stroke-width="1"/>
+    <text x="52" y="17" fill="#22D3EE" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Time-Series</text>
+
+    <rect x="115" y="0" width="115" height="26" rx="6" fill="rgba(16, 185, 129, 0.12)" stroke="#10B981" stroke-width="1"/>
+    <text x="172" y="17" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">GitHub Actions</text>
+
+    <rect x="240" y="0" width="95" height="26" rx="6" fill="rgba(192, 132, 252, 0.12)" stroke="#C084FC" stroke-width="1"/>
+    <text x="287" y="17" fill="#C084FC" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Scikit-learn</text>
+
+    <rect x="345" y="0" width="85" height="26" rx="6" fill="rgba(56, 189, 248, 0.12)" stroke="#38BDF8" stroke-width="1"/>
+    <text x="387" y="17" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Streamlit</text>
+
+    <rect x="440" y="0" width="75" height="26" rx="6" fill="rgba(245, 158, 11, 0.12)" stroke="#F59E0B" stroke-width="1"/>
+    <text x="477" y="17" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">NumPy</text>
+  </g>
+</svg>

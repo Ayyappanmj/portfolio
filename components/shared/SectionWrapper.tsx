@@ -15,7 +15,7 @@ export default function SectionWrapper({
     <motion.section
       id={id}
       className={cn("section-padding relative scroll-mt-20", className)}
-      initial={{ opacity: 0, y: 36 }}
+      initial={{ opacity: 1, y: 0 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.18 }}
       transition={{ duration: 0.7, ease: "easeOut" }}

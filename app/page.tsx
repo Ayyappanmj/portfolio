@@ -8,7 +8,6 @@ import Hero from "@/components/hero/Hero";
 import Projects from "@/components/projects/Projects";
 import Services from "@/components/services/Services";
 import Skills from "@/components/skills/Skills";
-import Testimonials from "@/components/testimonials/Testimonials";
 export default function HomePage() {
   return (
     <main>
@@ -20,7 +19,6 @@ export default function HomePage() {
       <Certifications />
       <Achievements />
       <Services />
-      <Testimonials />
       <Contact />
       <Footer />
     </main>

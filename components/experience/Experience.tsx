@@ -26,6 +26,13 @@ export default function Experience() {
                   {experience.role}
                 </h3>
                 <p className="mt-1 font-semibold text-muted">{experience.company}</p>
+                {/* @ts-ignore */}
+                {experience.summary && (
+                  <p className="mt-4 rounded-2xl border border-cyan-400/20 bg-cyan-400/5 p-4 text-sm leading-6 text-slate-200">
+                    {/* @ts-ignore */}
+                    {experience.summary}
+                  </p>
+                )}
                 <ul className="mt-5 space-y-3 text-muted">
                   {experience.responsibilities.map((item) => (
                     <li key={item} className="leading-7">
@@ -33,6 +40,20 @@ export default function Experience() {
                     </li>
                   ))}
                 </ul>
+                {/* @ts-ignore */}
+                {experience.skills && experience.skills.length > 0 && (
+                  <div className="mt-5 flex flex-wrap gap-2 border-t border-white/10 pt-4">
+                    {/* @ts-ignore */}
+                    {experience.skills.map((skill: string) => (
+                      <span
+                        key={skill}
+                        className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2.5 py-1 text-xs font-medium text-cyan-200"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </article>
             </div>
           ))}

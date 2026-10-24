@@ -1,13 +1,31 @@
 "use client";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-const particles = Array.from({ length: 28 }, (_, index) => ({
-  id: index,
-  left: `${Math.random() * 100}%`,
-  top: `${Math.random() * 100}%`,
-  size: Math.random() * 4 + 2,
-  duration: Math.random() * 10 + 8
-}));
+
+type Particle = {
+  id: number;
+  left: string;
+  top: string;
+  size: number;
+  duration: number;
+};
+
+const createParticles = (): Particle[] =>
+  Array.from({ length: 28 }, (_, index) => ({
+    id: index,
+    left: `${Math.random() * 100}%`,
+    top: `${Math.random() * 100}%`,
+    size: Math.random() * 4 + 2,
+    duration: Math.random() * 10 + 8
+  }));
+
 export default function ParticleBackground() {
+  const [particles, setParticles] = useState<Particle[]>([]);
+
+  useEffect(() => {
+    setParticles(createParticles());
+  }, []);
+
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
       {particles.map((particle) => (

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" fill="none">
+  <defs>
+    <linearGradient id="fraudBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140718"/>
+      <stop offset="50%" stop-color="#1E102F"/>
+      <stop offset="100%" stop-color="#0E0514"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+    <pattern id="fraudGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#fraudBg)"/>
+  <rect width="800" height="450" fill="url(#fraudGrid)"/>
+
+  <circle cx="160" cy="150" r="140" fill="#EF4444" opacity="0.12" filter="blur(65px)"/>
+  <circle cx="680" cy="300" r="150" fill="#8B5CF6" opacity="0.15" filter="blur(70px)"/>
+
+  <!-- Outer Card Frame -->
+  <rect x="30" y="30" width="740" height="390" rx="18" fill="rgba(15, 23, 42, 0.7)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+
+  <!-- Window Header -->
+  <rect x="30" y="30" width="740" height="44" rx="18" fill="rgba(30, 41, 59, 0.8)"/>
+  <circle cx="56" cy="52" r="6" fill="#EF4444"/>
+  <circle cx="76" cy="52" r="6" fill="#F59E0B"/>
+  <circle cx="96" cy="52" r="6" fill="#10B981"/>
+  <text x="124" y="56" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" font-weight="500">fraud-detection-api :: realtime-scoring :: fastapi-inference</text>
+  <rect x="620" y="42" width="130" height="22" rx="11" fill="rgba(239, 68, 68, 0.15)" stroke="#EF4444" stroke-width="1"/>
+  <text x="635" y="57" fill="#F87171" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Live Scoring API</text>
+
+  <!-- Left: Real-time Transaction Stream with Anomaly Flag -->
+  <g transform="translate(60, 95)">
+    <rect x="0" y="0" width="370" height="255" rx="14" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="20" y="30" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Real-Time Transaction Stream</text>
+    <text x="20" y="48" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">Scikit-learn Anomaly Detection (Isolation Forest)</text>
+
+    <!-- Normal Transaction 1 -->
+    <rect x="20" y="65" width="330" height="38" rx="8" fill="rgba(30, 41, 59, 0.6)" stroke="rgba(255,255,255,0.05)"/>
+    <circle cx="36" cy="84" r="5" fill="#10B981"/>
+    <text x="50" y="88" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">TXN #8912 • $42.50 • Grocery POS</text>
+    <text x="285" y="88" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600">VALID (0.04)</text>
+
+    <!-- Normal Transaction 2 -->
+    <rect x="20" y="110" width="330" height="38" rx="8" fill="rgba(30, 41, 59, 0.6)" stroke="rgba(255,255,255,0.05)"/>
+    <circle cx="36" cy="129" r="5" fill="#10B981"/>
+    <text x="50" y="133" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">TXN #8913 • $120.00 • Online Retail</text>
+    <text x="285" y="133" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600">VALID (0.11)</text>
+
+    <!-- Fraud Alert Transaction 3 -->
+    <rect x="20" y="155" width="330" height="46" rx="8" fill="rgba(239, 68, 68, 0.15)" stroke="#EF4444" stroke-width="1.5"/>
+    <circle cx="36" cy="178" r="6" fill="#EF4444"/>
+    <text x="50" y="174" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="11" font-weight="700">⚠️ TXN #8914 • $4,850.00 • High-Risk IP</text>
+    <text x="50" y="192" fill="#FDA4AF" font-family="system-ui, sans-serif" font-size="10">Anomaly Score: 0.94 • Geolocation Mismatch</text>
+    <text x="280" y="183" fill="#EF4444" font-family="system-ui, sans-serif" font-size="11" font-weight="800">BLOCKED</text>
+
+    <!-- Normal Transaction 4 -->
+    <rect x="20" y="208" width="330" height="34" rx="8" fill="rgba(30, 41, 59, 0.6)" stroke="rgba(255,255,255,0.05)"/>
+    <circle cx="36" cy="225" r="5" fill="#10B981"/>
+    <text x="50" y="229" fill="#E2E8F0" font-family="system-ui, sans-serif" font-size="11">TXN #8915 • $14.99 • Subscription</text>
+    <text x="285" y="229" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600">VALID (0.02)</text>
+  </g>
+
+  <!-- Right: API & Monitoring Dashboard Specs -->
+  <g transform="translate(455, 95)">
+    <rect x="0" y="0" width="290" height="120" rx="14" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="20" y="28" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="700">FastAPI Prediction Engine</text>
+    <text x="20" y="55" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">ENDPOINT: POST /api/v1/score</text>
+    <text x="20" y="78" fill="#38BDF8" font-family="monospace" font-size="11">{"is_fraud": true, "conf": 0.94}</text>
+    <text x="20" y="102" fill="#34D399" font-family="system-ui, sans-serif" font-size="11">⚡ Latency: &lt; 8ms per transaction</text>
+
+    <rect x="0" y="135" width="290" height="120" rx="14" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="20" y="163" fill="#C084FC" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Streamlit &amp; Docker Ops</text>
+    <text x="20" y="188" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="11">• Real-time visual anomaly trends</text>
+    <text x="20" y="208" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="11">• Containerized Docker deployment</text>
+    <text x="20" y="228" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="11">• Pydantic validation schemas</text>
+  </g>
+
+  <!-- Bottom Badges -->
+  <g transform="translate(60, 375)">
+    <rect x="0" y="0" width="85" height="26" rx="6" fill="rgba(239, 68, 68, 0.12)" stroke="#EF4444" stroke-width="1"/>
+    <text x="42" y="17" fill="#F87171" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">FastAPI</text>
+
+    <rect x="95" y="0" width="105" height="26" rx="6" fill="rgba(192, 132, 252, 0.12)" stroke="#C084FC" stroke-width="1"/>
+    <text x="147" y="17" fill="#C084FC" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Scikit-learn</text>
+
+    <rect x="210" y="0" width="85" height="26" rx="6" fill="rgba(56, 189, 248, 0.12)" stroke="#38BDF8" stroke-width="1"/>
+    <text x="252" y="17" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Docker</text>
+
+    <rect x="305" y="0" width="95" height="26" rx="6" fill="rgba(52, 211, 153, 0.12)" stroke="#34D399" stroke-width="1"/>
+    <text x="352" y="17" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Streamlit</text>
+
+    <rect x="410" y="0" width="85" height="26" rx="6" fill="rgba(251, 146, 60, 0.12)" stroke="#FB923C" stroke-width="1"/>
+    <text x="452" y="17" fill="#FB923C" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Pandas</text>
+  </g>
+</svg>

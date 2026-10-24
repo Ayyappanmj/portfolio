@@ -19,9 +19,6 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75 }}
         >
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">
-            Available for freelance and full-time roles
-          </p>
           <h1 className="font-poppins text-4xl font-extrabold leading-tight md:text-6xl lg:text-7xl">
             Hi, I am <span className="gradient-text">{profile.name}</span>
           </h1>

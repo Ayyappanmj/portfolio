@@ -1,13 +1,19 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaBars, FaMoon, FaSun, FaXmark } from "react-icons/fa6";
 import { navLinks } from "@/data/portfolio";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <header className="fixed left-0 right-0 top-4 z-50 px-4">
       <nav
@@ -15,7 +21,8 @@ export default function Navbar() {
         className="glass mx-auto flex max-w-7xl items-center justify-between rounded-2xl px-4 py-3"
       >
         <Link href="#home" className="focus-ring rounded-lg font-poppins text-xl font-bold">
-          <span className="gradient-text">AYYAPPAN.dev</span>
+          <span className="gradient-text">AYYAPPAN</span>{" "}
+          <span className="text-cyan-400">M</span>
         </Link>
         <div className="hidden items-center gap-7 md:flex">
           {navLinks.map((link) => (
@@ -35,7 +42,7 @@ export default function Navbar() {
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="focus-ring rounded-xl border border-white/10 p-3 text-sm transition hover:border-cyan-400 hover:text-cyan-400"
           >
-            {theme === "dark" ? <FaSun /> : <FaMoon />}
+            {mounted ? (theme === "dark" ? <FaSun /> : <FaMoon />) : <FaMoon />}
           </button>
           <button
             type="button"

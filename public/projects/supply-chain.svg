@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" fill="none">
+  <defs>
+    <linearGradient id="scBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1128"/>
+      <stop offset="50%" stop-color="#101F3C"/>
+      <stop offset="100%" stop-color="#080C1B"/>
+    </linearGradient>
+    <linearGradient id="blueCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <pattern id="scGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#scBg)"/>
+  <rect width="800" height="450" fill="url(#scGrid)"/>
+
+  <circle cx="160" cy="140" r="140" fill="#2563EB" opacity="0.15" filter="blur(65px)"/>
+  <circle cx="680" cy="310" r="150" fill="#06B6D4" opacity="0.12" filter="blur(70px)"/>
+
+  <!-- Outer Card Frame -->
+  <rect x="30" y="30" width="740" height="390" rx="18" fill="rgba(15, 23, 42, 0.7)" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+
+  <!-- Window Header -->
+  <rect x="30" y="30" width="740" height="44" rx="18" fill="rgba(30, 41, 59, 0.8)"/>
+  <circle cx="56" cy="52" r="6" fill="#EF4444"/>
+  <circle cx="76" cy="52" r="6" fill="#F59E0B"/>
+  <circle cx="96" cy="52" r="6" fill="#10B981"/>
+  <text x="124" y="56" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" font-weight="500">supply-chain-analytics :: 500k-records :: mysql-warehouse</text>
+  <rect x="625" y="42" width="125" height="22" rx="11" fill="rgba(56, 189, 248, 0.15)" stroke="#38BDF8" stroke-width="1"/>
+  <text x="640" y="57" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Power BI + DAX</text>
+
+  <!-- Left Side: Data Pipeline & MySQL Schema -->
+  <g transform="translate(60, 95)">
+    <rect x="0" y="0" width="370" height="255" rx="14" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="20" y="30" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="700">ETL Pipeline &amp; Data Warehouse Architecture</text>
+    <text x="20" y="48" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="11">500K+ Transactional Web &amp; Shipping Records</text>
+
+    <!-- Pipeline Stage 1 -->
+    <rect x="20" y="70" width="95" height="55" rx="8" fill="rgba(37, 99, 235, 0.15)" stroke="#3B82F6" stroke-width="1"/>
+    <text x="67" y="93" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Data Sources</text>
+    <text x="67" y="110" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Web / Inventory</text>
+
+    <!-- Arrow -->
+    <path d="M 115 97 L 140 97" stroke="#60A5FA" stroke-width="1.5"/>
+
+    <!-- Pipeline Stage 2 -->
+    <rect x="140" y="70" width="95" height="55" rx="8" fill="rgba(6, 182, 212, 0.15)" stroke="#06B6D4" stroke-width="1"/>
+    <text x="187" y="93" fill="#22D3EE" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Pandas / NumPy</text>
+    <text x="187" y="110" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Validation &amp; Clean</text>
+
+    <!-- Arrow -->
+    <path d="M 235 97 L 260 97" stroke="#22D3EE" stroke-width="1.5"/>
+
+    <!-- Pipeline Stage 3 -->
+    <rect x="260" y="70" width="95" height="55" rx="8" fill="rgba(16, 185, 129, 0.15)" stroke="#10B981" stroke-width="1"/>
+    <text x="307" y="93" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">MySQL DWH</text>
+    <text x="307" y="110" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">CTEs &amp; Windows</text>
+
+    <!-- SQL Highlight Box -->
+    <rect x="20" y="145" width="330" height="90" rx="8" fill="rgba(3, 7, 18, 0.6)" stroke="rgba(255,255,255,0.05)"/>
+    <text x="32" y="168" fill="#F59E0B" font-family="monospace" font-size="11">WITH CohortCTE AS (</text>
+    <text x="44" y="186" fill="#94A3B8" font-family="monospace" font-size="10">  SELECT customer_id, DENSE_RANK() OVER(...)</text>
+    <text x="44" y="202" fill="#94A3B8" font-family="monospace" font-size="10">  AVG(shipping_delay) OVER (PARTITION BY region)</text>
+    <text x="32" y="220" fill="#F59E0B" font-family="monospace" font-size="11">) -- Profitability &amp; CLV Analyzed</text>
+  </g>
+
+  <!-- Right Side: Power BI KPI Mockup -->
+  <g transform="translate(455, 95)">
+    <rect x="0" y="0" width="290" height="255" rx="14" fill="rgba(15, 23, 42, 0.9)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="20" y="28" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Executive Power BI Dashboard</text>
+
+    <!-- KPI Card 1 -->
+    <rect x="20" y="45" width="120" height="55" rx="8" fill="rgba(30, 41, 59, 0.7)"/>
+    <text x="32" y="65" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">TOTAL REVENUE</text>
+    <text x="32" y="88" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="16" font-weight="700">$48.2M</text>
+
+    <!-- KPI Card 2 -->
+    <rect x="150" y="45" width="120" height="55" rx="8" fill="rgba(30, 41, 59, 0.7)"/>
+    <text x="162" y="65" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">NET MARGIN</text>
+    <text x="162" y="88" fill="#34D399" font-family="system-ui, sans-serif" font-size="16" font-weight="700">24.6%</text>
+
+    <!-- Power BI Bar Chart representation -->
+    <text x="20" y="125" fill="#CBD5E1" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Regional Fulfillment Performance</text>
+    
+    <text x="20" y="152" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">North America</text>
+    <rect x="105" y="142" width="150" height="12" rx="3" fill="#3B82F6"/>
+
+    <text x="20" y="177" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Europe</text>
+    <rect x="105" y="167" width="125" height="12" rx="3" fill="#06B6D4"/>
+
+    <text x="20" y="202" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="10">Asia Pacific</text>
+    <rect x="105" y="192" width="160" height="12" rx="3" fill="#10B981"/>
+
+    <text x="20" y="235" fill="#A7F3D0" font-family="system-ui, sans-serif" font-size="10">✓ Automated DAX Measures &amp; Regional Drill-Downs</text>
+  </g>
+
+  <!-- Bottom Badges -->
+  <g transform="translate(60, 375)">
+    <rect x="0" y="0" width="85" height="26" rx="6" fill="rgba(59, 130, 246, 0.12)" stroke="#3B82F6" stroke-width="1"/>
+    <text x="42" y="17" fill="#60A5FA" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">MySQL DWH</text>
+
+    <rect x="95" y="0" width="85" height="26" rx="6" fill="rgba(245, 158, 11, 0.12)" stroke="#F59E0B" stroke-width="1"/>
+    <text x="137" y="17" fill="#FBBF24" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Power BI</text>
+
+    <rect x="190" y="0" width="85" height="26" rx="6" fill="rgba(56, 189, 248, 0.12)" stroke="#38BDF8" stroke-width="1"/>
+    <text x="232" y="17" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Pandas</text>
+
+    <rect x="285" y="0" width="105" height="26" rx="6" fill="rgba(52, 211, 153, 0.12)" stroke="#34D399" stroke-width="1"/>
+    <text x="337" y="17" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Advanced SQL</text>
+
+    <rect x="400" y="0" width="85" height="26" rx="6" fill="rgba(192, 132, 252, 0.12)" stroke="#C084FC" stroke-width="1"/>
+    <text x="442" y="17" fill="#C084FC" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">AWS / GCP</text>
+  </g>
+</svg>

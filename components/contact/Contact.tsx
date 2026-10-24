@@ -13,7 +13,7 @@ export default function Contact() {
       <SectionHeading
         eyebrow="Contact"
         title="Let us build something exceptional."
-        description="Send a message for freelance work, full-time opportunities, product consulting, or collaboration."
+        description="Reach out for software engineering, AI/ML, and data analytics opportunities or technical collaboration."
       />
       <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="glass rounded-3xl p-8">
@@ -42,7 +42,7 @@ export default function Contact() {
           <div className="mt-8 overflow-hidden rounded-3xl border border-white/10">
             <iframe
               title="Google Map Location"
-              src="[google.com](https://www.google.com/maps?q=Bengaluru%20India&output=embed)"
+              src="https://www.google.com/maps?q=India&amp;output=embed"
               className="h-64 w-full"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
