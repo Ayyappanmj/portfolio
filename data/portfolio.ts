@@ -78,7 +78,7 @@ export const aboutTimeline = [
 ];
 
 export const achievements = [
-  { value: 12, label: "Production Projects", icon: FaStar, suffix: "+" },
+  { value: 14, label: "Production Projects", icon: FaStar, suffix: "+" },
   { value: 25, label: "Core Skills Mastered", icon: FaBrain, suffix: "+" },
   { value: 3, label: "Internships Completed", icon: FaToolbox, suffix: "" },
   { value: 18, label: "Certifications", icon: FaCertificate, suffix: "+" },
@@ -529,8 +529,8 @@ export const projects = [
       "A real-time AI-powered drowsiness detection system that monitors eye movements using a webcam. Built with OpenCV and MediaPipe to calculate Eye Aspect Ratio (EAR) and trigger an alarm when prolonged eye closure is detected, helping prevent fatigue-related accidents.",
     image: "/projects/sleepdetect.png",
     technologies: ["Python", "OpenCV", "MediaPipe", "NumPy", "Pygame"],
-    github: "https://github.com/Ayyappanmj",
-    demo: "#",
+    github: "https://github.com/Ayyappanmj/Sleep-detection-alarm.git",
+    demo: "https://github.com/Ayyappanmj/Sleep-detection-alarm.git",
   },
   {
     title: "DoomScrolling Stop",
@@ -539,8 +539,8 @@ export const projects = [
       "An AI-powered desktop application that monitors prolonged screen usage using MediaPipe and OpenCV. The system detects user presence through a webcam and provides timely break reminders to reduce excessive doomscrolling.",
     image: "/projects/doomscrolling.png",
     technologies: ["Python", "OpenCV", "MediaPipe", "NumPy"],
-    github: "https://github.com/Ayyappanmj",
-    demo: "#",
+    github: "https://github.com/Ayyappanmj/doomscrolling-.git",
+    demo: "https://github.com/Ayyappanmj/doomscrolling-.git",
   },
   {
     title: "Smart Attendance System",
@@ -549,8 +549,8 @@ export const projects = [
       "An AI-powered facial recognition attendance system that automatically detects and recognizes registered users through a webcam using OpenCV and the LBPH Face Recognizer, logging attendance records with timestamps.",
     image: "/projects/smartattendece.png",
     technologies: ["Python", "OpenCV", "OpenCV Contrib", "Tkinter", "NumPy", "Pillow"],
-    github: "https://github.com/Ayyappanmj",
-    demo: "#",
+    github: "https://github.com/Ayyappanmj/Smart-Attendance-System.git",
+    demo: "https://github.com/Ayyappanmj/Smart-Attendance-System.git",
   },
 ];
 
