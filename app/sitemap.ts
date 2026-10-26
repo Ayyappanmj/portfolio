@@ -1,5 +1,9 @@
 import type { MetadataRoute } from "next";
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "[your-domain.com](https://your-domain.com)";
+
+export const dynamic = "force-static";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://ayyappanmj.github.io/portfolio";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
