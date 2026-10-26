@@ -218,16 +218,16 @@ export const certifications = [
     issuer: "K-DISC & GTech",
     date: "March 2024",
     tasks: "Completed structured technical innovation programme addressing real-world problem statements.",
-    image: "",
+    image: "/certificates/yip-internship.jpg",
     verify: "Certificate ID: µ2024032145",
   },
   {
     name: "IoT with AWS – Certificate of Training",
-    issuer: "NIT Calicut (IEEE Ragam Workshop)",
+    issuer: "NIT Calicut (Ragam 2023)",
     date: "March 2023",
-    tasks: "Hands-on workshop in IoT sensor telemetry and AWS cloud architecture.",
-    image: "",
-    verify: "Training Completion",
+    tasks: "Hands-on training workshop on IoT architectures and AWS cloud integration conducted by NIT Calicut.",
+    image: "/certificates/aws-iot-training.jpg",
+    verify: "NIT Calicut Ragam Workshop",
   },
 ];
 
@@ -294,6 +294,7 @@ export const experiences = [
       "Awarded an official Certificate of Appreciation (ID: µ2024032145) in recognition of dedication and contribution to the programme.",
     ],
     skills: ["Emerging Technologies", "System Prototyping", "Problem Solving", "IoT & Cloud"],
+    certificate: "/certificates/yip-internship.jpg",
   },
 ];
 
