@@ -1,19 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
-  <rect width="800" height="450" fill="#0e0e12"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" fill="none">
   <defs>
-    <pattern id="grid7" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#27272a" stroke-width="0.5" stroke-opacity="0.6"/>
+    <pattern id="grid-ao" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#27272a" stroke-width="0.75" stroke-opacity="0.4"/>
     </pattern>
   </defs>
-  <rect width="800" height="450" fill="url(#grid7)"/>
-  <rect x="40" y="40" width="720" height="370" rx="12" fill="#121216" stroke="#27272a" stroke-width="1"/>
-  <text x="730" y="75" fill="#10b981" font-family="monospace" font-size="12" text-anchor="end">● CIS COMPLIANCE // ANSIBLE</text>
-  <g transform="translate(80, 110)">
-    <rect x="0" y="0" width="640" height="120" rx="8" fill="#18181b" stroke="#27272a" stroke-width="1"/>
-    <text x="30" y="45" fill="#fafafa" font-family="monospace" font-size="13">$ ansible-playbook site.yml --tags harden,compliance,audit</text>
-    <text x="30" y="75" fill="#a1a1aa" font-family="monospace" font-size="12">Drift Detection Engine · SHA-256 Config Backups · SSH / Firewall Policy</text>
-    <text x="30" y="100" fill="#71717a" font-family="monospace" font-size="12">Lockout Safeguards · CIS Severity Benchmarking · Pytest CI Automation</text>
+  <rect width="800" height="450" fill="#09090b"/>
+  <rect width="800" height="450" fill="url(#grid-ao)"/>
+  <rect x="25" y="25" width="750" height="400" rx="14" fill="#121215" stroke="#27272a" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="25" y="25" width="750" height="42" rx="14" fill="#18181b"/>
+  <circle cx="50" cy="46" r="5" fill="#3f3f46"/>
+  <circle cx="66" cy="46" r="5" fill="#3f3f46"/>
+  <circle cx="82" cy="46" r="5" fill="#3f3f46"/>
+  <text x="105" y="50" fill="#a1a1aa" font-family="monospace" font-size="12">autoops :: ansible-automation :: cis-compliance-audit</text>
+  <rect x="625" y="35" width="135" height="22" rx="6" fill="#121215" stroke="#27272a" stroke-width="1"/>
+  <text x="692" y="50" fill="#10b981" font-family="monospace" font-size="11" text-anchor="middle">● CIS COMPLIANT</text>
+
+  <!-- Left: Ansible Playbook Execution -->
+  <g transform="translate(45, 85)">
+    <rect x="0" y="0" width="345" height="315" rx="10" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+    <text x="18" y="28" fill="#fafafa" font-family="monospace" font-size="13" font-weight="bold">INFRASTRUCTURE AS CODE</text>
+    <text x="18" y="48" fill="#71717a" font-family="monospace" font-size="11">Ansible Playbooks · Python Drift Engine</text>
+
+    <!-- Terminal Box -->
+    <rect x="18" y="65" width="309" height="150" rx="6" fill="#09090b" stroke="#27272a" stroke-width="1"/>
+    <text x="28" y="88" fill="#71717a" font-family="monospace" font-size="10">$ ansible-playbook site.yml --tags=security</text>
+    <text x="28" y="110" fill="#10b981" font-family="monospace" font-size="10">PLAY [Hardened Linux Baseline] *****************</text>
+    <text x="28" y="128" fill="#10b981" font-family="monospace" font-size="10">ok: [prod-srv-01] =&gt; SSH root login disabled</text>
+    <text x="28" y="146" fill="#10b981" font-family="monospace" font-size="10">ok: [prod-srv-01] =&gt; UFW baseline: 22, 443 only</text>
+    <text x="28" y="164" fill="#10b981" font-family="monospace" font-size="10">changed: [prod-srv-01] =&gt; SHA-256 backup taken</text>
+    <text x="28" y="185" fill="#fafafa" font-family="monospace" font-size="10">PLAY RECAP: 18 ok, 2 changed, 0 failed</text>
+    <text x="28" y="202" fill="#71717a" font-family="monospace" font-size="10">Zero Lockout Safeguard active</text>
+
+    <!-- Drift Detection Tag -->
+    <rect x="18" y="230" width="309" height="60" rx="6" fill="#121215" stroke="#27272a" stroke-width="1"/>
+    <text x="28" y="252" fill="#71717a" font-family="monospace" font-size="10">DRIFT RECONCILIATION</text>
+    <text x="28" y="272" fill="#10b981" font-family="monospace" font-size="12" font-weight="bold">Continuous SHA-256 Hash Auditing</text>
   </g>
-  <text x="80" y="290" fill="#fafafa" font-family="sans-serif" font-size="22" font-weight="bold">AutoOps Linux Automation</text>
-  <text x="80" y="325" fill="#a1a1aa" font-family="monospace" font-size="13">Infrastructure as Code, Continuous Hardening &amp; Compliance Auditing</text>
+
+  <!-- Right: CIS Benchmark Severity Radar -->
+  <g transform="translate(410, 85)">
+    <rect x="0" y="0" width="345" height="315" rx="10" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+    <text x="18" y="28" fill="#fafafa" font-family="monospace" font-size="13" font-weight="bold">CIS BENCHMARK SCORING</text>
+    <text x="18" y="48" fill="#71717a" font-family="monospace" font-size="11">Automated Severity Assessment &amp; Fixes</text>
+
+    <!-- Checklist Box -->
+    <rect x="18" y="65" width="309" height="135" rx="6" fill="#09090b" stroke="#27272a" stroke-width="1"/>
+    <text x="28" y="88" fill="#fafafa" font-family="monospace" font-size="11" font-weight="bold">CIS LINUX LEVEL 1 AUDIT</text>
+    <text x="28" y="110" fill="#10b981" font-family="monospace" font-size="10">✓ 5.2.1 Disable SSH Root Login: PASS</text>
+    <text x="28" y="128" fill="#10b981" font-family="monospace" font-size="10">✓ 3.5.1 Firewall Rules Active: PASS</text>
+    <text x="28" y="146" fill="#10b981" font-family="monospace" font-size="10">✓ 1.1.1 Unused Filesystems Disabled: PASS</text>
+    <text x="28" y="164" fill="#10b981" font-family="monospace" font-size="10">✓ 4.1.2 Auditd Rules Configured: PASS</text>
+    <text x="28" y="185" fill="#71717a" font-family="monospace" font-size="10">Total Compliance Score: 98.2%</text>
+
+    <!-- Metrics -->
+    <rect x="18" y="215" width="145" height="75" rx="6" fill="#121215" stroke="#27272a" stroke-width="1"/>
+    <text x="28" y="238" fill="#71717a" font-family="monospace" font-size="10">TEST SUITE</text>
+    <text x="28" y="258" fill="#fafafa" font-family="monospace" font-size="14" font-weight="bold">Pytest</text>
+    <text x="28" y="276" fill="#10b981" font-family="monospace" font-size="10">CI Automated</text>
+
+    <rect x="182" y="215" width="145" height="75" rx="6" fill="#121215" stroke="#27272a" stroke-width="1"/>
+    <text x="192" y="238" fill="#71717a" font-family="monospace" font-size="10">RUNBOOKS</text>
+    <text x="192" y="258" fill="#fafafa" font-family="monospace" font-size="14" font-weight="bold">Idempotent</text>
+    <text x="192" y="276" fill="#10b981" font-family="monospace" font-size="10">Zero Downtime</text>
+  </g>
 </svg>

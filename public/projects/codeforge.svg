@@ -1,19 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
-  <rect width="800" height="450" fill="#0e0e12"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" fill="none">
   <defs>
-    <pattern id="grid3" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#27272a" stroke-width="0.5" stroke-opacity="0.6"/>
+    <pattern id="grid-cf" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#27272a" stroke-width="0.75" stroke-opacity="0.4"/>
     </pattern>
   </defs>
-  <rect width="800" height="450" fill="url(#grid3)"/>
-  <rect x="40" y="40" width="720" height="370" rx="12" fill="#121216" stroke="#27272a" stroke-width="1"/>
-  <text x="730" y="75" fill="#10b981" font-family="monospace" font-size="12" text-anchor="end">● HARDENED RUNTIME // 96 TESTS</text>
-  <g transform="translate(80, 110)">
-    <rect x="0" y="0" width="640" height="130" rx="8" fill="#18181b" stroke="#27272a" stroke-width="1"/>
-    <text x="25" y="40" fill="#a1a1aa" font-family="monospace" font-size="13">$ docker run --read-only --cap-drop=ALL --pids-limit=64</text>
-    <text x="25" y="70" fill="#10b981" font-family="monospace" font-size="13">✓ ISOLATED_SANDBOX_SPAWNED [Python / Node.js]</text>
-    <text x="25" y="100" fill="#71717a" font-family="monospace" font-size="12">CAS State Transitions · Outbox Broker: RabbitMQ · Timeout Enforcement</text>
+  <rect width="800" height="450" fill="#09090b"/>
+  <rect width="800" height="450" fill="url(#grid-cf)"/>
+  <rect x="25" y="25" width="750" height="400" rx="14" fill="#121215" stroke="#27272a" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="25" y="25" width="750" height="42" rx="14" fill="#18181b"/>
+  <circle cx="50" cy="46" r="5" fill="#3f3f46"/>
+  <circle cx="66" cy="46" r="5" fill="#3f3f46"/>
+  <circle cx="82" cy="46" r="5" fill="#3f3f46"/>
+  <text x="105" y="50" fill="#a1a1aa" font-family="monospace" font-size="12">codeforge :: rce-sandbox :: docker-isolation</text>
+  <rect x="630" y="35" width="130" height="22" rx="6" fill="#121215" stroke="#27272a" stroke-width="1"/>
+  <text x="695" y="50" fill="#10b981" font-family="monospace" font-size="11" text-anchor="middle">● 96 TESTS PASSING</text>
+
+  <!-- Left: Hardened Docker Container Runtime -->
+  <g transform="translate(45, 85)">
+    <rect x="0" y="0" width="345" height="315" rx="10" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+    <text x="18" y="28" fill="#fafafa" font-family="monospace" font-size="13" font-weight="bold">NETWORK-ISOLATED CONTAINER</text>
+    <text x="18" y="48" fill="#71717a" font-family="monospace" font-size="11">Dropped Capabilities · Read-Only RootFS</text>
+
+    <!-- Shell Execution Box -->
+    <rect x="18" y="65" width="309" height="150" rx="6" fill="#09090b" stroke="#27272a" stroke-width="1"/>
+    <text x="28" y="88" fill="#71717a" font-family="monospace" font-size="10">$ docker run --network=none \</text>
+    <text x="38" y="106" fill="#d4d4d8" font-family="monospace" font-size="10">  --read-only --cap-drop=ALL \</text>
+    <text x="38" y="124" fill="#d4d4d8" font-family="monospace" font-size="10">  --pids-limit=64 --memory=256m \</text>
+    <text x="38" y="142" fill="#d4d4d8" font-family="monospace" font-size="10">  --cpus=1.0 -v /tmp/sub_88:/code:ro \</text>
+    <text x="38" y="160" fill="#a1a1aa" font-family="monospace" font-size="10">  codeforge-py-sandbox:latest</text>
+    <text x="28" y="185" fill="#10b981" font-family="monospace" font-size="10">✓ EXEC FINISHED: 0.284s · Memory: 32MB</text>
+    <text x="28" y="202" fill="#71717a" font-family="monospace" font-size="10">Return code: 0 · Standard Out captured</text>
+
+    <!-- Security Check List -->
+    <rect x="18" y="230" width="309" height="60" rx="6" fill="#121215" stroke="#27272a" stroke-width="1"/>
+    <text x="28" y="252" fill="#10b981" font-family="monospace" font-size="11">✓ Zero Host File Leaks</text>
+    <text x="175" y="252" fill="#10b981" font-family="monospace" font-size="11">✓ OOM / Fork-Bomb Safe</text>
+    <text x="28" y="274" fill="#10b981" font-family="monospace" font-size="11">✓ Strict 5000ms Timeout</text>
+    <text x="175" y="274" fill="#10b981" font-family="monospace" font-size="11">✓ Dropped root privileges</text>
   </g>
-  <text x="80" y="295" fill="#fafafa" font-family="sans-serif" font-size="22" font-weight="bold">CodeForge Remote Sandbox</text>
-  <text x="80" y="330" fill="#a1a1aa" font-family="monospace" font-size="13">Asynchronous Untrusted Code Execution Platform with Network-Isolated Workers</text>
+
+  <!-- Right: Worker Architecture & Outbox -->
+  <g transform="translate(410, 85)">
+    <rect x="0" y="0" width="345" height="315" rx="10" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+    <text x="18" y="28" fill="#fafafa" font-family="monospace" font-size="13" font-weight="bold">ASYNCHRONOUS DISPATCH</text>
+    <text x="18" y="48" fill="#71717a" font-family="monospace" font-size="11">RabbitMQ · Compare-And-Set State Transitions</text>
+
+    <!-- Flow Card -->
+    <rect x="18" y="65" width="309" height="120" rx="6" fill="#121215" stroke="#27272a" stroke-width="1"/>
+    <text x="28" y="88" fill="#fafafa" font-family="monospace" font-size="11" font-weight="bold">TRANSACTIONAL OUTBOX PIPELINE</text>
+    <text x="28" y="110" fill="#a1a1aa" font-family="monospace" font-size="10">1. Client POST /api/v1/execute → DB commit</text>
+    <text x="28" y="128" fill="#a1a1aa" font-family="monospace" font-size="10">2. Outbox Relay → RabbitMQ submission queue</text>
+    <text x="28" y="146" fill="#a1a1aa" font-family="monospace" font-size="10">3. Worker pool spawns disposable sandbox</text>
+    <text x="28" y="166" fill="#10b981" font-family="monospace" font-size="10">4. CAS state transition: QUEUED → EXECUTING → DONE</text>
+
+    <!-- Live Execution UI Mockup -->
+    <rect x="18" y="200" width="309" height="90" rx="6" fill="#09090b" stroke="#27272a" stroke-width="1"/>
+    <text x="28" y="222" fill="#71717a" font-family="monospace" font-size="10">REACT DASHBOARD TELEMETRY</text>
+    <text x="28" y="244" fill="#fafafa" font-family="monospace" font-size="11">Runtimes Supported: Python 3.12, Node 20</text>
+    <text x="28" y="265" fill="#10b981" font-family="monospace" font-size="11">Throughput: 120 submissions/min concurrent</text>
+  </g>
 </svg>

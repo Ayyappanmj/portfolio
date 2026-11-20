@@ -1,19 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
-  <rect width="800" height="450" fill="#0e0e12"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" fill="none">
   <defs>
-    <pattern id="grid8" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#27272a" stroke-width="0.5" stroke-opacity="0.6"/>
+    <pattern id="grid-ad" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#27272a" stroke-width="0.75" stroke-opacity="0.4"/>
     </pattern>
   </defs>
-  <rect width="800" height="450" fill="url(#grid8)"/>
-  <rect x="40" y="40" width="720" height="370" rx="12" fill="#121216" stroke="#27272a" stroke-width="1"/>
-  <text x="730" y="75" fill="#10b981" font-family="monospace" font-size="12" text-anchor="end">● ACTIVE DIRECTORY // WS 2022</text>
-  <g transform="translate(80, 110)">
-    <rect x="0" y="0" width="640" height="120" rx="8" fill="#18181b" stroke="#27272a" stroke-width="1"/>
-    <text x="30" y="45" fill="#fafafa" font-family="monospace" font-size="13">AUTOMATED JML LIFECYCLE · AGDLP RBAC · GPO HARDENING</text>
-    <text x="30" y="75" fill="#a1a1aa" font-family="monospace" font-size="12">PowerShell Identity Automation · Stale Account Auditing · NTFS/SMB ACLs</text>
-    <text x="30" y="100" fill="#71717a" font-family="monospace" font-size="12">10 Incident Runbooks: Event IDs 4740/4625, Secure Channel &amp; DNS Health</text>
+  <rect width="800" height="450" fill="#09090b"/>
+  <rect width="800" height="450" fill="url(#grid-ad)"/>
+  <rect x="25" y="25" width="750" height="400" rx="14" fill="#121215" stroke="#27272a" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <rect x="25" y="25" width="750" height="42" rx="14" fill="#18181b"/>
+  <circle cx="50" cy="46" r="5" fill="#3f3f46"/>
+  <circle cx="66" cy="46" r="5" fill="#3f3f46"/>
+  <circle cx="82" cy="46" r="5" fill="#3f3f46"/>
+  <text x="105" y="50" fill="#a1a1aa" font-family="monospace" font-size="12">enterprise-ad :: windows-server-2022 :: agdlp-rbac</text>
+  <rect x="625" y="35" width="135" height="22" rx="6" fill="#121215" stroke="#27272a" stroke-width="1"/>
+  <text x="692" y="50" fill="#10b981" font-family="monospace" font-size="11" text-anchor="middle">● AD DS FOREST HEALTHY</text>
+
+  <!-- Left: Identity Lifecycle (JML) & PowerShell -->
+  <g transform="translate(45, 85)">
+    <rect x="0" y="0" width="345" height="315" rx="10" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+    <text x="18" y="28" fill="#fafafa" font-family="monospace" font-size="13" font-weight="bold">JML IDENTITY LIFECYCLE</text>
+    <text x="18" y="48" fill="#71717a" font-family="monospace" font-size="11">Automated Joiner-Mover-Leaver via PowerShell</text>
+
+    <!-- PowerShell Box -->
+    <rect x="18" y="65" width="309" height="150" rx="6" fill="#09090b" stroke="#27272a" stroke-width="1"/>
+    <text x="28" y="88" fill="#71717a" font-family="monospace" font-size="10"># Automated User Provisioning</text>
+    <text x="28" y="108" fill="#fafafa" font-family="monospace" font-size="10">New-ADUser -Name "John Doe" -Path $OU \</text>
+    <text x="38" y="126" fill="#d4d4d8" font-family="monospace" font-size="10">  -AccountPassword $Pass -Enabled $true</text>
+    <text x="28" y="148" fill="#10b981" font-family="monospace" font-size="10">✓ AGDLP: Assigned to G_Finance_RW</text>
+    <text x="28" y="168" fill="#10b981" font-family="monospace" font-size="10">✓ NTFS &amp; SMB permissions inherited</text>
+    <text x="28" y="188" fill="#71717a" font-family="monospace" font-size="10">Quarantine OU offboarding automated</text>
+    <text x="28" y="204" fill="#71717a" font-family="monospace" font-size="10">Stale account scanner: 90-day inactivity</text>
+
+    <!-- Stats -->
+    <rect x="18" y="230" width="309" height="60" rx="6" fill="#121215" stroke="#27272a" stroke-width="1"/>
+    <text x="28" y="252" fill="#71717a" font-family="monospace" font-size="10">ACCESS GOVERNANCE</text>
+    <text x="28" y="272" fill="#fafafa" font-family="monospace" font-size="12" font-weight="bold">AGDLP RBAC Model</text>
+    <text x="200" y="272" fill="#10b981" font-family="monospace" font-size="11">Zero Orphan ACLs</text>
   </g>
-  <text x="80" y="290" fill="#fafafa" font-family="sans-serif" font-size="22" font-weight="bold">Enterprise Active Directory Lab</text>
-  <text x="80" y="325" fill="#a1a1aa" font-family="monospace" font-size="13">Identity Lifecycle Management, Governance, Security GPOs &amp; Diagnostics</text>
+
+  <!-- Right: GPO Hardening & Event Diagnostics -->
+  <g transform="translate(410, 85)">
+    <rect x="0" y="0" width="345" height="315" rx="10" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+    <text x="18" y="28" fill="#fafafa" font-family="monospace" font-size="13" font-weight="bold">GPO HARDENING &amp; RUNBOOKS</text>
+    <text x="18" y="48" fill="#71717a" font-family="monospace" font-size="11">10 Enterprise Incident Diagnostic Runbooks</text>
+
+    <!-- Runbooks Box -->
+    <rect x="18" y="65" width="309" height="135" rx="6" fill="#09090b" stroke="#27272a" stroke-width="1"/>
+    <text x="28" y="88" fill="#fafafa" font-family="monospace" font-size="11" font-weight="bold">AUDIT RUNBOOKS RESOLVED:</text>
+    <text x="28" y="110" fill="#10b981" font-family="monospace" font-size="10">✓ Event ID 4740: Account lockout root cause</text>
+    <text x="28" y="128" fill="#10b981" font-family="monospace" font-size="10">✓ Event ID 4625: Brute-force failed logon</text>
+    <text x="28" y="146" fill="#10b981" font-family="monospace" font-size="10">✓ Secure Channel: nltest broken trust repair</text>
+    <text x="28" y="164" fill="#10b981" font-family="monospace" font-size="10">✓ DNS SRV Records: _ldap._tcp verification</text>
+    <text x="28" y="185" fill="#71717a" font-family="monospace" font-size="10">GPO: LAPS enabled · SMBv1 disabled</text>
+
+    <!-- Metrics -->
+    <rect x="18" y="215" width="145" height="75" rx="6" fill="#121215" stroke="#27272a" stroke-width="1"/>
+    <text x="28" y="238" fill="#71717a" font-family="monospace" font-size="10">OS PLATFORM</text>
+    <text x="28" y="258" fill="#fafafa" font-family="monospace" font-size="13" font-weight="bold">WS 2022</text>
+    <text x="28" y="276" fill="#10b981" font-family="monospace" font-size="10">AD DS Domain</text>
+
+    <rect x="182" y="215" width="145" height="75" rx="6" fill="#121215" stroke="#27272a" stroke-width="1"/>
+    <text x="192" y="238" fill="#71717a" font-family="monospace" font-size="10">RUNBOOKS</text>
+    <text x="192" y="258" fill="#fafafa" font-family="monospace" font-size="13" font-weight="bold">10 Scenarios</text>
+    <text x="192" y="276" fill="#10b981" font-family="monospace" font-size="10">SOP Verified</text>
+  </g>
 </svg>

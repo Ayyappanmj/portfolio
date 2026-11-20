@@ -447,7 +447,7 @@ export const projects = [
     category: "AI & Agents",
     description:
       "Static analysis and LLM-assisted code review tool that analyzes Git diffs and pull requests for security vulnerabilities (OWASP Top 10, SQL injection, credential leaks), code smells, and style violations. Generates inline GitHub PR review comments with suggested remediations.",
-    image: "/projects/self-healing-agent.svg",
+    image: "/projects/automated-code-review.svg",
     technologies: [
       "Python",
       "AST",

@@ -1,29 +1,90 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
-  <rect width="800" height="450" fill="#0e0e12"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" fill="none">
   <defs>
-    <pattern id="grid2" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#27272a" stroke-width="0.5" stroke-opacity="0.6"/>
+    <pattern id="grid-sf" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#27272a" stroke-width="0.75" stroke-opacity="0.4"/>
     </pattern>
   </defs>
-  <rect width="800" height="450" fill="url(#grid2)"/>
-  <rect x="40" y="40" width="720" height="370" rx="12" fill="#121216" stroke="#27272a" stroke-width="1"/>
-  <text x="730" y="75" fill="#10b981" font-family="monospace" font-size="12" text-anchor="end">● SAGA ORCHESTRATOR // 46 TESTS</text>
-  <g transform="translate(80, 120)">
-    <rect x="0" y="0" width="180" height="90" rx="8" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
-    <text x="20" y="35" fill="#fafafa" font-family="monospace" font-size="13" font-weight="bold">[1] INVENTORY</text>
-    <text x="20" y="60" fill="#a1a1aa" font-family="monospace" font-size="11">Reserved (Compensable)</text>
-    <line x1="180" y1="45" x2="230" y2="45" stroke="#52525b" stroke-width="2" stroke-dasharray="4"/>
+  <rect width="800" height="450" fill="#09090b"/>
+  <rect width="800" height="450" fill="url(#grid-sf)"/>
+  <rect x="25" y="25" width="750" height="400" rx="14" fill="#121215" stroke="#27272a" stroke-width="1.5"/>
 
-    <rect x="230" y="0" width="180" height="90" rx="8" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
-    <text x="250" y="35" fill="#fafafa" font-family="monospace" font-size="13" font-weight="bold">[2] PAYMENT</text>
-    <text x="250" y="60" fill="#a1a1aa" font-family="monospace" font-size="11">Authorized (2PC/Outbox)</text>
-    <line x1="410" y1="45" x2="460" y2="45" stroke="#52525b" stroke-width="2" stroke-dasharray="4"/>
+  <!-- Header -->
+  <rect x="25" y="25" width="750" height="42" rx="14" fill="#18181b"/>
+  <circle cx="50" cy="46" r="5" fill="#3f3f46"/>
+  <circle cx="66" cy="46" r="5" fill="#3f3f46"/>
+  <circle cx="82" cy="46" r="5" fill="#3f3f46"/>
+  <text x="105" y="50" fill="#a1a1aa" font-family="monospace" font-size="12">sagaflow :: distributed-orchestration :: rabbitmq-outbox</text>
+  <rect x="635" y="35" width="125" height="22" rx="6" fill="#121215" stroke="#27272a" stroke-width="1"/>
+  <text x="697" y="50" fill="#10b981" font-family="monospace" font-size="11" text-anchor="middle">● 46 TESTS PASSING</text>
 
-    <rect x="460" y="0" width="180" height="90" rx="8" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
-    <text x="480" y="35" fill="#fafafa" font-family="monospace" font-size="13" font-weight="bold">[3] SHIPPING</text>
-    <text x="480" y="60" fill="#a1a1aa" font-family="monospace" font-size="11">Dispatched (RabbitMQ)</text>
+  <!-- Top: 3-Stage Saga State Machine -->
+  <g transform="translate(45, 85)">
+    <rect x="0" y="0" width="710" height="135" rx="10" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+    <text x="20" y="26" fill="#fafafa" font-family="monospace" font-size="12" font-weight="bold">DISTRIBUTED SAGA TRANSACTION PIPELINE</text>
+    <text x="500" y="26" fill="#71717a" font-family="monospace" font-size="11">Optimistic Locking · Version Cas Check</text>
+
+    <!-- Node 1: Inventory -->
+    <rect x="20" y="42" width="195" height="72" rx="6" fill="#09090b" stroke="#3f3f46" stroke-width="1"/>
+    <text x="32" y="64" fill="#fafafa" font-family="monospace" font-size="12" font-weight="bold">[1] INVENTORY SERVICE</text>
+    <text x="32" y="82" fill="#10b981" font-family="monospace" font-size="10">✓ Reserved (Compensable)</text>
+    <text x="32" y="98" fill="#71717a" font-family="monospace" font-size="10">Rollback: ReleaseStock()</text>
+
+    <!-- Arrow 1 -->
+    <line x1="215" y1="78" x2="255" y2="78" stroke="#52525b" stroke-width="2" stroke-dasharray="4"/>
+    <polygon points="255,75 262,78 255,81" fill="#71717a"/>
+
+    <!-- Node 2: Payment -->
+    <rect x="262" y="42" width="195" height="72" rx="6" fill="#09090b" stroke="#3f3f46" stroke-width="1"/>
+    <text x="274" y="64" fill="#fafafa" font-family="monospace" font-size="12" font-weight="bold">[2] PAYMENT SERVICE</text>
+    <text x="274" y="82" fill="#10b981" font-family="monospace" font-size="10">✓ Authorized (Outbox)</text>
+    <text x="274" y="98" fill="#71717a" font-family="monospace" font-size="10">Rollback: RefundCharge()</text>
+
+    <!-- Arrow 2 -->
+    <line x1="457" y1="78" x2="497" y2="78" stroke="#52525b" stroke-width="2" stroke-dasharray="4"/>
+    <polygon points="497,75 504,78 497,81" fill="#71717a"/>
+
+    <!-- Node 3: Shipping -->
+    <rect x="504" y="42" width="186" height="72" rx="6" fill="#09090b" stroke="#3f3f46" stroke-width="1"/>
+    <text x="516" y="64" fill="#fafafa" font-family="monospace" font-size="12" font-weight="bold">[3] SHIPPING SERVICE</text>
+    <text x="516" y="82" fill="#10b981" font-family="monospace" font-size="10">✓ Dispatched (Final)</text>
+    <text x="516" y="98" fill="#71717a" font-family="monospace" font-size="10">RabbitMQ Broker</text>
   </g>
-  <text x="80" y="280" fill="#fafafa" font-family="sans-serif" font-size="22" font-weight="bold">SagaFlow Distributed Engine</text>
-  <text x="80" y="315" fill="#a1a1aa" font-family="monospace" font-size="13">Persisted State Machine · Optimistic Locking · Transactional Outbox</text>
-  <text x="80" y="345" fill="#71717a" font-family="monospace" font-size="12">Reverse Compensating Transactions · Crash Recovery Sweeper</text>
+
+  <!-- Bottom Left: Fault Injection & Compensation -->
+  <g transform="translate(45, 235)">
+    <rect x="0" y="0" width="345" height="165" rx="10" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+    <text x="18" y="26" fill="#fafafa" font-family="monospace" font-size="12" font-weight="bold">DETERMINISTIC FAULT INJECTION</text>
+    <text x="18" y="44" fill="#71717a" font-family="monospace" font-size="11">Automated Compensating Rollback Sweeper</text>
+
+    <rect x="18" y="58" width="309" height="92" rx="6" fill="#09090b" stroke="#27272a" stroke-width="1"/>
+    <text x="28" y="80" fill="#eab308" font-family="monospace" font-size="10">SIMULATION: Injected payment timeout at Step 2</text>
+    <text x="28" y="98" fill="#a1a1aa" font-family="monospace" font-size="10">→ Triggering reverse-order compensation</text>
+    <text x="28" y="116" fill="#10b981" font-family="monospace" font-size="10">✓ INVENTORY RELEASED: SKU-4091 restocked</text>
+    <text x="28" y="134" fill="#71717a" font-family="monospace" font-size="10">Saga marked: COMPENSATED · 0 state leaks</text>
+  </g>
+
+  <!-- Bottom Right: Architecture Metrics -->
+  <g transform="translate(410, 235)">
+    <rect x="0" y="0" width="345" height="165" rx="10" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+    <text x="18" y="26" fill="#fafafa" font-family="monospace" font-size="12" font-weight="bold">RELIABILITY METRICS</text>
+    <text x="18" y="44" fill="#71717a" font-family="monospace" font-size="11">Prometheus &amp; Grafana Instrumentation</text>
+
+    <g transform="translate(18, 58)">
+      <rect x="0" y="0" width="145" height="42" rx="6" fill="#09090b" stroke="#27272a" stroke-width="1"/>
+      <text x="12" y="18" fill="#71717a" font-family="monospace" font-size="9">MESSAGE GUARANTEE</text>
+      <text x="12" y="34" fill="#fafafa" font-family="monospace" font-size="12" font-weight="bold">At-Least-Once</text>
+
+      <rect x="164" y="0" width="145" height="42" rx="6" fill="#09090b" stroke="#27272a" stroke-width="1"/>
+      <text x="176" y="18" fill="#71717a" font-family="monospace" font-size="9">LOCK STRATEGY</text>
+      <text x="176" y="34" fill="#fafafa" font-family="monospace" font-size="12" font-weight="bold">Optimistic CAS</text>
+
+      <rect x="0" y="50" width="145" height="42" rx="6" fill="#09090b" stroke="#27272a" stroke-width="1"/>
+      <text x="12" y="68" fill="#71717a" font-family="monospace" font-size="9">CRASH RECOVERY</text>
+      <text x="12" y="84" fill="#10b981" font-family="monospace" font-size="12" font-weight="bold">Sweeper Cron</text>
+
+      <rect x="164" y="50" width="145" height="42" rx="6" fill="#09090b" stroke="#27272a" stroke-width="1"/>
+      <text x="176" y="68" fill="#71717a" font-family="monospace" font-size="9">TEST COVERAGE</text>
+      <text x="176" y="84" fill="#10b981" font-family="monospace" font-size="12" font-weight="bold">46 Scenarios</text>
+    </g>
+  </g>
 </svg>
