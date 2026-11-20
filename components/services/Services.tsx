@@ -1,26 +1,27 @@
 import SectionHeading from "@/components/shared/SectionHeading";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import { services } from "@/data/portfolio";
+
 export default function Services() {
   return (
     <SectionWrapper id="services">
       <SectionHeading
-        eyebrow="Services"
-        title="From idea to polished product."
-        description="End-to-end development services for founders, agencies, startups, and growing product teams."
+        eyebrow="07 // SERVICES"
+        title="Engineering consulting &amp; product development."
+        description="Core technical services across distributed systems, autonomous AI agents, data engineering, and infrastructure automation."
       />
-      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
-        {services.map((service) => {
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        {services.map((service, index) => {
           return (
             <article
               key={service.title}
-              className="glass rounded-3xl p-6 transition hover:-translate-y-2 hover:shadow-glow"
+              className="flex flex-col justify-between rounded-2xl border border-[#27272A] bg-[#121215] p-6 transition duration-200 hover:border-[#3F3F46]"
             >
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-400/10 p-4 text-3xl text-cyan-400">
-                <span aria-hidden>💡</span>
+              <div>
+                <span className="font-mono text-xs text-zinc-500">0{index + 1}</span>
+                <h3 className="mt-3 text-lg font-bold text-[#FAFAFA]">{service.title}</h3>
+                <p className="mt-3 text-xs leading-relaxed text-[#A1A1AA]">{service.description}</p>
               </div>
-              <h3 className="font-poppins text-xl font-bold">{service.title}</h3>
-              <p className="mt-4 leading-7 text-muted">{service.description}</p>
             </article>
           );
         })}

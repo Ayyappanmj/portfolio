@@ -1,44 +1,45 @@
 import SectionHeading from "@/components/shared/SectionHeading";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import { aboutTimeline, profile } from "@/data/portfolio";
+
 export default function About() {
   return (
     <SectionWrapper id="about">
       <SectionHeading
-        eyebrow="About Me"
-        title="Engineering digital products with precision and taste."
-        description="I combine strong frontend craft, backend architecture, cloud deployment, and product thinking to build experiences that look premium and perform reliably."
+        eyebrow="01 // ABOUT"
+        title="Engineering digital systems with precision and rigor."
+        description="Combining deep backend architecture, distributed systems patterns, autonomous AI agents, and enterprise data analytics pipelines."
       />
-      <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="glass rounded-3xl p-8">
-          <h3 className="font-poppins text-2xl font-bold">Professional Summary</h3>
-          <p className="mt-5 leading-8 text-muted">
-            I am an Information Technology engineer focused on architecting resilient backend systems, autonomous AI agents, and enterprise data analytics pipelines. My work includes designing production-shaped API gateways with Redis-backed Lua token-bucket rate limiting, multi-agent AI workflows for automated market intelligence, and production-grade RAG assistants using hybrid FAISS/BM25 retrieval with local Ollama inference. In data engineering, I have modeled data warehouses processing 500K+ transactional records with MySQL and Power BI, as well as sports analytics optimization platforms on PostgreSQL. With hands-on internship experience in data analytics and production Python engineering—enforcing rigorous TDD (pytest), profiling (cProfile), and GitHub Actions CI/CD—I build software that combines technical rigor, security, and measurable business impact.
-
-
+      <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="rounded-2xl border border-[#27272A] bg-[#121215] p-8 transition hover:border-[#3F3F46]">
+          <h3 className="text-xl font-bold text-[#FAFAFA]">Professional Summary</h3>
+          <p className="mt-4 leading-relaxed text-[#A1A1AA]">
+            I am a Software Engineer focused on architecting resilient distributed backends, autonomous AI agent workflows, and high-throughput data engineering pipelines. My work spans designing transactional outbox engines, saga orchestrators over RabbitMQ/Kafka, hardened Docker sandbox runtimes, and hybrid RAG systems (FAISS/BM25) with Model Context Protocol (MCP) integrations.
+          </p>
+          <p className="mt-4 leading-relaxed text-[#A1A1AA]">
+            In data engineering, I design Bronze-Silver-Gold lakehouses with PySpark, DuckDB, and dbt Core, enforcing strict Pandera schema validation gates and automated Airflow DAG orchestration. With production internship experience enforcing Test-Driven Development (pytest), profiling (cProfile), and GitHub Actions CI/CD automation, I build software that combines technical rigor, security, and measurable performance.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-2xl border border-white/10 p-5">
-              <p className="text-sm text-muted">Location</p>
-              <p className="mt-1 font-semibold">{profile.location}</p>
+            <div className="rounded-xl border border-zinc-800/80 bg-zinc-900/50 p-4">
+              <p className="font-mono text-xs uppercase tracking-wider text-zinc-500">Location</p>
+              <p className="mt-1 font-mono text-sm font-semibold text-zinc-200">{profile.location}</p>
             </div>
-            <div className="rounded-2xl border border-white/10 p-5">
-              <p className="text-sm text-muted">Primary Role</p>
-              <p className="mt-1 font-semibold">{profile.title}</p>
+            <div className="rounded-xl border border-zinc-800/80 bg-zinc-900/50 p-4">
+              <p className="font-mono text-xs uppercase tracking-wider text-zinc-500">Primary Focus</p>
+              <p className="mt-1 font-mono text-sm font-semibold text-zinc-200">{profile.title}</p>
             </div>
           </div>
         </div>
-        <div className="relative">
-          <div className="absolute left-5 top-0 h-full w-px bg-gradient-to-b from-blue-500 via-purple-500 to-cyan-400" />
-          <div className="space-y-6">
+
+        <div className="relative rounded-2xl border border-[#27272A] bg-[#121215] p-8 transition hover:border-[#3F3F46]">
+          <h3 className="mb-6 font-mono text-xs uppercase tracking-wider text-zinc-400">Education &amp; Background</h3>
+          <div className="relative border-l border-zinc-800 pl-6 space-y-8">
             {aboutTimeline.map((item) => (
-              <div key={item.year} className="relative pl-14">
-                <div className="absolute left-2 top-2 h-7 w-7 rounded-full border-4 border-slate-950 bg-cyan-400 shadow-glow" />
-                <div className="glass rounded-3xl p-6 transition hover:-translate-y-1">
-                  <span className="text-sm font-bold text-cyan-400">{item.year}</span>
-                  <h3 className="mt-2 font-poppins text-xl font-bold">{item.title}</h3>
-                  <p className="mt-3 leading-7 text-muted">{item.description}</p>
-                </div>
+              <div key={item.year} className="relative">
+                <div className="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border border-zinc-600 bg-zinc-900" />
+                <span className="font-mono text-xs font-semibold text-zinc-400">{item.year}</span>
+                <h4 className="mt-1 text-base font-bold text-[#FAFAFA]">{item.title}</h4>
+                <p className="mt-2 text-sm leading-relaxed text-[#A1A1AA]">{item.description}</p>
               </div>
             ))}
           </div>

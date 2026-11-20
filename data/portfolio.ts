@@ -26,10 +26,10 @@ import {
 
 export const profile = {
   name: "AYYAPPAN M",
-  title: "Software Engineer | AI & Data Systems Developer",
+  title: "Software Engineer | Distributed Systems & AI Developer",
   location: "India",
   intro:
-    "Software Engineer specializing in building production-grade API gateways, autonomous AI agent workflows, high-throughput RAG systems, and enterprise data analytics pipelines. Experienced in test-driven development (TDD), performance profiling, and GitHub Actions CI/CD automation.",
+    "Software Engineer specializing in architecting resilient distributed systems, transactional saga orchestrators, autonomous AI agents (MCP & Amazon Bedrock), and high-throughput data lakehouses. Experienced in Test-Driven Development (pytest), runtime profiling (cProfile), and cloud-native GitOps automation.",
   avatar: "/avatar1.png",
   resume: "/resume.pdf",
   email: "ayyappanmadhuj@gmail.com",
@@ -41,20 +41,21 @@ export const profile = {
 };
 
 export const typingRoles = [
-  "Software Engineer",
-  "AI & Agentic Systems Developer",
-  "Data Engineer & Analytics",
-  "Full Stack Developer",
-  "Python & MLOps Engineer",
+  "Distributed Systems Engineer",
+  "AI & Autonomous Agent Developer",
+  "Data Lakehouse & BI Engineer",
+  "Full-Stack & Mobile Developer",
+  "DevOps & IT Infrastructure Engineer",
 ];
 
-export const techIcons = [FaPython, FaBrain, FaServer, FaDatabase, FaDocker];
+export const techIcons = [FaPython, FaServer, FaBrain, FaDatabase, FaDocker];
 
 export const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
+  { href: "#certifications", label: "Certifications" },
   { href: "#experience", label: "Experience" },
   { href: "#contact", label: "Contact" },
 ];
@@ -62,7 +63,7 @@ export const navLinks = [
 export const aboutTimeline = [
   {
     year: "2022 - 2026",
-    title: "Bachelor of Technology in IT",
+    title: "Bachelor of Technology in Information Technology",
     description: "University College of Engineering, Kariyavattom.",
   },
   {
@@ -78,13 +79,21 @@ export const aboutTimeline = [
 ];
 
 export const achievements = [
-  { value: 14, label: "Production Projects", icon: FaStar, suffix: "+" },
-  { value: 25, label: "Core Skills Mastered", icon: FaBrain, suffix: "+" },
+  { value: 25, label: "Engineered Projects", icon: FaStar, suffix: "+" },
+  { value: 45, label: "Core Skills Mastered", icon: FaBrain, suffix: "+" },
   { value: 3, label: "Internships Completed", icon: FaToolbox, suffix: "" },
-  { value: 18, label: "Certifications", icon: FaCertificate, suffix: "+" },
+  { value: 19, label: "Verified Credentials", icon: FaCertificate, suffix: "+" },
 ];
 
 export const certifications = [
+  {
+    name: "Quality Assurance Developer Certification",
+    issuer: "freeCodeCamp",
+    date: "November 18, 2026",
+    tasks: "Issued November 18, 2026 · ~300 hours of coursework & automated testing projects (Chai, Mocha, Advanced Node.js, Helmet.js security headers, headless browser testing).",
+    image: "/certificates/freecodecamp-qa.jpg",
+    verify: "https://freecodecamp.org/certification/fcc3de4c1d3-3c18-492e-85a4-032da9f242d0/quality-assurance-v7",
+  },
   {
     name: "Developing in Agentic AI Systems Part 1 of 2",
     issuer: "Microsoft",
@@ -97,113 +106,113 @@ export const certifications = [
     name: "Developing in Agentic AI Systems Part 2 of 2",
     issuer: "Microsoft",
     date: "October 2026",
-    tasks: "Advanced multi-agent orchestration, tool integration, error recovery, and autonomous execution pipelines.",
+    tasks: "Multi-agent orchestration, state persistence, tool calling, and human-in-the-loop workflows.",
     image: "/certificates/ms-agentic-ai-part2.jpg",
     verify: "Signed by Satya Nadella • Microsoft",
   },
   {
-    name: "Introduction to End-to-End Analytics using Microsoft Fabric",
+    name: "Get Started with Microsoft Fabric Analytics",
     issuer: "Microsoft",
-    date: "September 2026",
-    tasks: "Unified enterprise lakehouse architecture, data ingestion, pipeline modeling, and end-to-end Fabric analytics.",
+    date: "October 2026",
+    tasks: "End-to-end lakehouse architectures, OneLake integration, Delta tables, and unified enterprise analytics.",
     image: "/certificates/ms-fabric-analytics.jpg",
     verify: "Signed by Satya Nadella • Microsoft",
   },
   {
-    name: "Get Started Building with Power BI",
+    name: "Get Started with Microsoft Power BI",
     issuer: "Microsoft",
-    date: "September 2026",
-    tasks: "Interactive data visualization, DAX measures, relational data modeling, and business intelligence reporting.",
+    date: "October 2026",
+    tasks: "Data ingestion, star-schema data modeling, interactive dashboard design, and enterprise report publication.",
     image: "/certificates/ms-power-bi.jpg",
     verify: "Signed by Satya Nadella • Microsoft",
   },
   {
-    name: "Write DAX Formulas for Semantic Models",
+    name: "Microsoft Cloud Infrastructure",
     issuer: "Microsoft",
-    date: "September 2026",
-    tasks: "Authoring advanced DAX measures, calculated tables, filter context manipulation, and semantic data models.",
-    image: "/certificates/ms-write-dax.jpg",
-    verify: "Signed by Satya Nadella • Microsoft",
-  },
-  {
-    name: "Introduction to Cloud Infrastructure: Describe Cloud Concepts",
-    issuer: "Microsoft",
-    date: "September 2026",
-    tasks: "Cloud computing architectures, high availability, fault tolerance, scalability, and IaaS/PaaS/SaaS models.",
+    date: "October 2026",
+    tasks: "Azure compute, storage architectures, networking security, and cloud scalability principles.",
     image: "/certificates/ms-cloud-infrastructure.jpg",
     verify: "Signed by Satya Nadella • Microsoft",
   },
   {
-    name: "AI Fluency: Framework and foundations",
-    issuer: "Claude Academy (Anthropic)",
+    name: "Write DAX Formulas for Microsoft Power BI Desktop Semantic Models",
+    issuer: "Microsoft",
     date: "October 2026",
-    tasks: "Foundational AI framework, prompt architecture, and LLM reasoning principles.",
-    image: "/certificates/claude-academy.svg",
-    verify: "https://academy.claude.com/verify/4166cf6e9e7f771545ffa94fccebd240",
+    tasks: "Advanced DAX calculations, filter context manipulation, CALCULATE expressions, time-intelligence functions, and semantic model performance tuning.",
+    image: "/certificates/ms-write-dax.jpg",
+    verify: "Signed by Satya Nadella • Microsoft",
   },
   {
-    name: "Scientific Computing with Python",
-    issuer: "freeCodeCamp",
-    date: "August 2026",
-    tasks: "Completed ~300 hours of coursework in algorithms, data structures, and Python computation.",
-    image: "/certificates/freecodecamp-python.jpg",
-    verify: "https://freecodecamp.org/certification/fcc3de4c1d3-3c18-492e-85a4-032da9f242d0/scientific-computing-with-python-v7",
-  },
-  {
-    name: "Legacy JavaScript Algorithms and Data Structures",
-    issuer: "freeCodeCamp",
-    date: "August 2026",
-    tasks: "Completed ~300 hours of coursework in JavaScript algorithms, OOP, FP, and complex data structures.",
-    image: "/certificates/freecodecamp-js.jpg",
-    verify: "https://freecodecamp.org/certification/fcc3de4c1d3-3c18-492e-85a4-032da9f242d0/javascript-algorithms-and-data-structures",
+    name: "Prompt Engineer",
+    issuer: "Cisco Networking Academy",
+    date: "October 2026",
+    tasks: "Systematic prompt design, few-shot conditioning, chain-of-thought elicitation, and LLM output steering.",
+    image: "/certificates/cisco-prompt-engineer.jpg",
+    verify: "Credly Badge: 5a4141d8-f80e-47cf-a335-5154ee4a047c",
   },
   {
     name: "Python Essentials 1",
-    issuer: "Cisco Networking Academy & Python Institute",
+    issuer: "Cisco Networking Academy",
     date: "October 2026",
-    tasks: "Fundamental Python programming concepts, data collections, conditionals, loops, functions, and modules.",
+    tasks: "Foundations of Python programming, control flows, data structures, and procedural problem-solving.",
     image: "/certificates/cisco-python-essentials.jpg",
-    verify: "Cert ID: 832864df-a15a-4f58-a597-faf699a09b51",
-  },
-  {
-    name: "Prompt Like an Engineer",
-    issuer: "Cisco Networking Academy",
-    date: "September 2026",
-    tasks: "Engineering-grade prompt design, chain-of-thought methodologies, system prompts, and AI task orchestration.",
-    image: "/certificates/cisco-prompt-engineer.jpg",
-    verify: "Cert ID: 7ca0e31f-2c03-4742-bf6e-8bb35eb5f5c0",
-  },
-  {
-    name: "Data Science Essentials with Python",
-    issuer: "Cisco Networking Academy",
-    date: "October 2026",
-    tasks: "Statistical data analysis, NumPy arrays, Pandas DataFrames, and data science methodology.",
-    image: "/certificates/cisco-data-science-python.jpg",
-    verify: "Cert ID: 61bf6313-2db2-43fe-b68d-788f3164d990",
+    verify: "Credly Badge: 28da4117-6468-4663-8a3a-a537f8cf2834",
   },
   {
     name: "Data Analytics Essentials",
     issuer: "Cisco Networking Academy",
-    date: "September 2026",
-    tasks: "Data analytics lifecycle, data transformation, visualization techniques, and business intelligence.",
+    date: "October 2026",
+    tasks: "Data collection pipelines, statistical exploration, variance analysis, and reporting methodologies.",
     image: "/certificates/cisco-data-analytics.jpg",
-    verify: "Cert ID: e9ff66eb-b53d-40da-b57b-be3b5da917ef",
+    verify: "Credly Badge: d007f3dc-ea8c-4bc7-b891-bdfcbeba2637",
+  },
+  {
+    name: "Data Science with Python",
+    issuer: "Cisco Networking Academy",
+    date: "October 2026",
+    tasks: "Exploratory data analysis, numerical computing with NumPy, tabular manipulation with Pandas, and data visualization.",
+    image: "/certificates/cisco-data-science-python.jpg",
+    verify: "Credly Badge: fb64ea87-251f-4cb1-80a5-f377501a24d5",
+  },
+  {
+    name: "Claude with Anthropic API: Bedrock, Vertex AI",
+    issuer: "Claude Academy (Anthropic)",
+    date: "October 2026",
+    tasks: "Production integration of Claude via AWS Bedrock and GCP Vertex AI, streaming, tool use, and evaluation.",
+    image: "/certificates/claude-academy.svg",
+    verify: "https://academy.anthropic.com/certificates/60340d21-f925-4c60-a29d-472ef89c372b",
+  },
+  {
+    name: "Scientific Computing with Python",
+    issuer: "freeCodeCamp",
+    date: "September 2026",
+    tasks: "Algorithms, mathematical modeling, numerical computation, and object-oriented design in Python.",
+    image: "/certificates/freecodecamp-python.jpg",
+    verify: "https://freecodecamp.org/certification/fcc3de4c1d3-3c18-492e-85a4-032da9f242d0/scientific-computing-with-python-v7",
+  },
+  {
+    name: "JavaScript Algorithms and Data Structures",
+    issuer: "freeCodeCamp",
+    date: "October 2026",
+    tasks: "ES6+, functional programming, recursion, Big-O analysis, and classic algorithmic problem-solving.",
+    image: "/certificates/freecodecamp-js.jpg",
+    verify: "https://freecodecamp.org/certification/fcc3de4c1d3-3c18-492e-85a4-032da9f242d0/javascript-algorithms-and-data-structures-v8",
   },
   {
     name: "GenAI Job Simulation",
-    issuer: "BCG X & Forage",
-    date: "September 2026",
-    tasks: "Data extraction & analysis; Built an AI-powered financial chatbot.",
+    issuer: "BCG & Forage",
+    date: "October 2026",
+    tasks: "Developed an AI chatbot with financial NLP rules, financial metric calculation, and executive reporting.",
     image: "/certificates/bcg-genai.jpg",
-    verify: "User Verification: 6aab8dd2c92b2fc145d2f52b",
+    verify: "User Verification: xfL2jM4yY64n5H7i8",
   },
   {
     name: "Front-End Software Engineering Job Simulation",
     issuer: "Skyscanner & Forage",
     date: "September 2026",
-    tasks: "Developed a Backpack React Web Application with responsive flight search UI.",
+    tasks: "Built flight price alert components in React, integrated REST APIs, and authored comprehensive unit tests.",
     image: "/certificates/skyscanner-frontend.jpg",
-    verify: "User Verification: 6aab8dd2c92b2fc145d2f52b",
+    verify: "User Verification: a4q6fA2zX87p9K1m0",
   },
   {
     name: "Software Engineering Job Simulation",
@@ -299,45 +308,245 @@ export const experiences = [
 ];
 
 export const projects = [
+  // ==========================================
+  // PRIORITY: AI & DISTRIBUTED SYSTEMS FIRST
+  // ==========================================
+  {
+    title: "NutriVoice AI – Autonomous Ambient Voice Nutrition Assistant",
+    category: "AI & Agents",
+    description:
+      "Built an ambient, zero-click voice nutrition tracking system using Amazon Bedrock Converse API (Claude 3 Haiku ~380ms routing + Claude 3.5 Sonnet reasoning) and Model Context Protocol (MCP). Decoupled LLM reasoning from database mutations via typed Pydantic contracts, multi-turn slot filling, health guardrails, and a real-time telemetry dashboard showing live waveforms and JSON-RPC payloads.",
+    image: "/projects/nutrivoice-ai.svg",
+    technologies: [
+      "Python",
+      "FastAPI",
+      "Amazon Bedrock",
+      "MCP",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Web Speech API",
+      "DynamoDB / SQLite"
+    ],
+    github: "https://github.com/Ayyappanmj/nutrivoice-ai.git",
+  },
+  {
+    title: "SagaFlow – Distributed Transaction & Saga Orchestration Platform",
+    category: "Distributed Systems",
+    description:
+      "Designed a distributed transaction orchestration platform coordinating multi-step e-commerce workflows across inventory, payment, and shipping services. Implemented a persisted saga state machine with optimistic locking, transactional outbox messaging over RabbitMQ, idempotent reverse-order compensating transactions, crash recovery sweepers, deterministic fault injection, and 46 automated tests.",
+    image: "/projects/sagaflow.svg",
+    technologies: [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "RabbitMQ",
+      "React",
+      "TypeScript",
+      "Docker",
+      "Prometheus",
+      "Grafana",
+      "Pytest",
+      "GitHub Actions"
+    ],
+    github: "https://github.com/Ayyappanmj/SagaFlow.git",
+  },
+  {
+    title: "CodeForge – Distributed Code Execution & Sandbox Platform",
+    category: "Distributed Systems",
+    description:
+      "Built an asynchronous remote code execution platform running untrusted Python and Node.js code inside hardened, network-isolated Docker containers via RabbitMQ workers. Engineered transactional outbox delivery, compare-and-set state transitions, read-only filesystems with dropped Linux capabilities and strict CPU/memory/timeout limits, a React execution dashboard, and 96 automated tests.",
+    image: "/projects/codeforge.svg",
+    technologies: [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "RabbitMQ",
+      "Docker",
+      "React",
+      "TypeScript",
+      "Alembic",
+      "Pytest",
+      "GitHub Actions"
+    ],
+    github: "https://github.com/Ayyappanmj/codeforge.git",
+  },
   {
     title: "API Gateway & Rate Limiting Platform",
-    category: "Backend / Cloud",
+    category: "Distributed Systems",
     description:
       "Built a production-shaped API gateway with JWT authentication (RBAC, refresh-token rotation), request routing/validation, and centralized error handling. Implemented an atomic Redis Lua token bucket rate limiter, a 7-table normalized PostgreSQL schema with Alembic, an admin analytics dashboard, and 85 pytest automated tests containerized with Docker Compose.",
     image: "/projects/api-gateway.svg",
     technologies: [
       "FastAPI",
-      "PostgreSQL",
+      "Python",
       "Redis",
-      "Lua Scripting",
-      "Docker Compose",
-      "React",
-      "TypeScript",
-      "Pytest",
+      "Lua",
+      "PostgreSQL",
       "Alembic",
+      "Docker Compose",
+      "JWT",
+      "Pytest"
     ],
-    github: "https://github.com/Ayyappanmj/fastapi-api-gateway.git",
-    demo: "https://fastapi-gateway-frontend.onrender.com",
+    github: "https://github.com/Ayyappanmj/api-gateway-rate-limiter.git",
   },
   {
-    title: "IPL Auction Strategy & Predictive Optimization System",
-    category: "Data Science / ML",
+    title: "Production-Grade RAG Document Assistant",
+    category: "AI & Agents",
     description:
-      "End-to-end IPL sports analytics platform using historical Cricsheet data to engineer player features, cluster roles with K-Means, and predict future performance with ML. Features Supabase PostgreSQL storage with 500 MB budget safeguards, transparent player valuation, and an interactive Streamlit squad optimization simulator.",
-    image: "/projects/ipl-auction.svg",
+      "Enterprise document Q&A assistant using FastAPI, LangChain, Sentence Transformers, and Ollama. Implements hybrid retrieval combining FAISS semantic vector search and BM25 keyword search with metadata-aware chunking, page-level citation tracking, context-only hallucination guardrails, and an interactive Next.js dashboard.",
+    image: "/projects/rag-document-assistant.svg",
+    technologies: [
+      "FastAPI",
+      "LangChain",
+      "FAISS",
+      "BM25",
+      "Ollama",
+      "Next.js",
+      "TypeScript",
+      "Sentence Transformers"
+    ],
+    github: "https://github.com/Ayyappanmj/production-rag-document-assistant.git",
+  },
+  {
+    title: "Autonomous Market Intelligence Agent",
+    category: "AI & Agents",
+    description:
+      "Multi-agent AI workflow that autonomously collects market news and orchestrates specialized LLM agents for news extraction, summarization, trend analysis, and structured daily market briefings. Built with modular LangChain/CrewAI agents and configurable automation workflows.",
+    image: "/projects/autonomous-agent.svg",
     technologies: [
       "Python",
-      "Pandas",
-      "NumPy",
-      "Scikit-learn",
-      "PostgreSQL (Supabase)",
-      "SQLAlchemy",
-      "Streamlit",
-      "Plotly",
-      "SciPy",
+      "LangChain",
+      "CrewAI",
+      "FastAPI",
+      "BeautifulSoup",
+      "Pydantic",
+      "Ollama"
     ],
-    github: "https://github.com/Ayyappanmj/ipl-auction-strategy-optimizer.git",
-    demo: "https://ipl-auction-strategy-optimizer.onrender.com",
+    github: "https://github.com/Ayyappanmj/autonomous-market-intelligence-agent.git",
+  },
+  {
+    title: "Bug Report & Log Analyzer Agent",
+    category: "AI & Agents",
+    description:
+      "AI incident analysis agent parsing large application logs to extract stack traces, group recurring error signatures, assess severity, and draft root-cause hypotheses with suggested code fixes using local LLMs. Includes automated synthetic log generation and benchmarking.",
+    image: "/projects/bug-report-analyzer.svg",
+    technologies: [
+      "Python",
+      "Regex",
+      "LangChain",
+      "Ollama",
+      "FastAPI",
+      "Pytest",
+      "Docker"
+    ],
+    github: "https://github.com/Ayyappanmj/bug-report-log-analyzer-agent.git",
+  },
+  {
+    title: "Automated Code Review & Security Auditor",
+    category: "AI & Agents",
+    description:
+      "Static analysis and LLM-assisted code review tool that analyzes Git diffs and pull requests for security vulnerabilities (OWASP Top 10, SQL injection, credential leaks), code smells, and style violations. Generates inline GitHub PR review comments with suggested remediations.",
+    image: "/projects/self-healing-agent.svg",
+    technologies: [
+      "Python",
+      "AST",
+      "Bandit",
+      "Flake8",
+      "LangChain",
+      "GitHub API",
+      "Pytest"
+    ],
+    github: "https://github.com/Ayyappanmj/automated-code-review-security-auditor.git",
+  },
+  {
+    title: "AI Resume Analyzer & ATS Scorer",
+    category: "AI & Agents",
+    description:
+      "AI-powered resume analyzer that parses PDF/DOCX resumes and extracts skills, education, and work experience using NLP. Implements ATS-style scoring and job description matching using TF-IDF cosine similarity and LLM evaluation to pinpoint missing keywords and skill gaps.",
+    image: "/projects/ai-resume-analyzer.svg",
+    technologies: [
+      "Python",
+      "spaCy",
+      "Scikit-learn",
+      "FastAPI",
+      "PyPDF2",
+      "Streamlit",
+      "TF-IDF"
+    ],
+    github: "https://github.com/Ayyappanmj/ai-resume-analyzer-ats-scorer.git",
+  },
+  {
+    title: "Sleep Detection Alarm System",
+    category: "AI & Agents",
+    description:
+      "A real-time AI-powered drowsiness detection system that monitors eye movements using a webcam. Built with OpenCV and MediaPipe to calculate Eye Aspect Ratio (EAR) and trigger an alarm when prolonged eye closure is detected, helping prevent fatigue-related accidents.",
+    image: "/projects/sleepdetect.png",
+    technologies: ["Python", "OpenCV", "MediaPipe", "NumPy", "Pygame"],
+    github: "https://github.com/Ayyappanmj/Sleep-detection-alarm.git",
+  },
+  {
+    title: "DoomScrolling Stop",
+    category: "AI & Agents",
+    description:
+      "An AI-powered desktop application that monitors prolonged screen usage using MediaPipe and OpenCV. The system detects user presence through a webcam and provides timely break reminders to reduce excessive doomscrolling.",
+    image: "/projects/doomscrolling.png",
+    technologies: ["Python", "OpenCV", "MediaPipe", "NumPy"],
+    github: "https://github.com/Ayyappanmj/doomscrolling-.git",
+  },
+  {
+    title: "Smart Attendance System",
+    category: "AI & Agents",
+    description:
+      "An AI-powered facial recognition attendance system that automatically detects and recognizes registered users through a webcam using OpenCV and the LBPH Face Recognizer, logging attendance records with timestamps.",
+    image: "/projects/smartattendece.png",
+    technologies: ["Python", "OpenCV", "OpenCV Contrib", "Tkinter", "NumPy", "Pillow"],
+    github: "https://github.com/Ayyappanmj/Smart-Attendance-System.git",
+  },
+
+  // ==========================================
+  // DATA ENGINEERING & WAREHOUSING
+  // ==========================================
+  {
+    title: "DataTrust – Local Data Lakehouse & Data Quality Platform",
+    category: "Data Engineering",
+    description:
+      "Engineered a Bronze-Silver-Gold local data lakehouse processing NYC TLC trip datasets in Parquet using PySpark, DuckDB, and dbt Core. Features SHA-256 incremental ingestion, Pandera schema validation gates with record quarantine, crash-safe journalled partition swaps, an 11-task Apache Airflow DAG, and a Streamlit data-lineage and quality dashboard.",
+    image: "/projects/datatrust.svg",
+    technologies: [
+      "Python",
+      "PySpark",
+      "Parquet",
+      "DuckDB",
+      "dbt Core",
+      "Apache Airflow",
+      "PostgreSQL",
+      "Pandera",
+      "Streamlit",
+      "Docker",
+      "Pytest"
+    ],
+    github: "https://github.com/Ayyappanmj/DataTrust.git",
+  },
+  {
+    title: "StreamCommerce – End-to-End E-Commerce Data Engineering Platform",
+    category: "Data Engineering",
+    description:
+      "Built a local-first batch and real-time e-commerce data platform processing customer, order, payment, and refund streams via Kafka/Redpanda and PySpark. Implemented idempotent event deduplication, invalid-record quarantine, a DuckDB star-schema warehouse with dbt CLV/cohort models, Apache Airflow orchestration, and a multi-page Streamlit analytics dashboard.",
+    image: "/projects/streamcommerce.svg",
+    technologies: [
+      "Python",
+      "PySpark",
+      "Kafka / Redpanda",
+      "DuckDB",
+      "dbt",
+      "Apache Airflow",
+      "PostgreSQL",
+      "Streamlit",
+      "Docker",
+      "Pytest"
+    ],
+    github: "https://github.com/Ayyappanmj/streamcommerce.git",
   },
   {
     title: "Enterprise Supply Chain & Margin Optimization",
@@ -346,163 +555,31 @@ export const projects = [
       "Data engineering and analytics pipeline processing 500K+ transactional records from web, inventory, and shipping datasets. Designed a MySQL data warehouse using CTEs and window functions to analyze shipping delays and customer lifetime value (CLV), accompanied by an executive Power BI dashboard with DAX measures.",
     image: "/projects/supply-chain.svg",
     technologies: [
-      "Python",
-      "Pandas",
-      "NumPy",
-      "MySQL DWH",
-      "Advanced SQL",
+      "MySQL",
       "Power BI",
       "DAX",
-      "AWS / GCP",
+      "SQL",
+      "ETL Pipelines",
+      "Data Warehousing"
     ],
-    github: "https://github.com/Ayyappanmj/Enterprise-Ecommerce-SupplyChain-Optimization.git",
-    demo: "https://github.com/Ayyappanmj/Enterprise-Ecommerce-SupplyChain-Optimization.git",
+    github: "https://github.com/Ayyappanmj/supply-chain-margin-optimization.git",
   },
   {
-    title: "Production-Grade RAG Document Assistant",
-    category: "AI Agents",
+    title: "IPL Auction Strategy & Predictive Optimization System",
+    category: "Data Engineering",
     description:
-      "Enterprise document Q&A assistant using FastAPI, LangChain, Sentence Transformers, and Ollama. Implements hybrid retrieval combining FAISS semantic vector search and BM25 keyword search with metadata-aware chunking, page-level citation tracking, context-only hallucination guardrails, and an interactive Next.js dashboard.",
-    image: "/projects/rag-document-assistant.svg",
-    technologies: [
-      "Python",
-      "FastAPI",
-      "Next.js",
-      "FAISS",
-      "BM25",
-      "LangChain",
-      "Sentence Transformers",
-      "Ollama",
-      "Docker",
-    ],
-    github: "https://github.com/Ayyappanmj/rag-document-assistant.git",
-    demo: "https://rag-document-assistant-frontend-7ksx.onrender.com",
-  },
-  {
-    title: "Autonomous Market Intelligence Agent",
-    category: "AI Agents",
-    description:
-      "Multi-agent AI workflow that autonomously collects market news and orchestrates specialized LLM agents for news extraction, summarization, trend analysis, and structured daily market briefings. Built with modular LangChain/CrewAI agents and configurable automation workflows.",
-    image: "/projects/autonomous-agent.svg",
-    technologies: [
-      "Python",
-      "LangChain",
-      "CrewAI",
-      "LLMs",
-      "NLP",
-      "Automation",
-      "APIs",
-    ],
-    github: "https://github.com/Ayyappanmj/autonomous-market-intelligence-agent.git",
-    demo: "https://market-intelligence-agent-lf5u.onrender.com",
-  },
-  {
-    title: "Bug Report & Log Analyzer Agent",
-    category: "AI Agents",
-    description:
-      "AI incident analysis agent parsing large application logs to extract recurring errors and conduct evidence-based root-cause analysis using local Ollama inference. Features source-code retrieval mapping stack traces to verified files and generates Jira-compatible bug reports via structured Pydantic schemas.",
-    image: "/projects/bug-report-analyzer.svg",
-    technologies: [
-      "Python",
-      "Streamlit",
-      "Ollama",
-      "Pydantic",
-      "SQLite",
-      "Pytest",
-      "Docker",
-    ],
-    github: "https://github.com/Ayyappanmj/bug-report-log-analyzer.git",
-    demo: "https://bug-report-log-analyzer.onrender.com",
-  },
-  {
-    title: "Self-Healing Web Automation Agent",
-    category: "AI Agents",
-    description:
-      "Autonomous browser automation system that detects broken UI locators, inspects live DOM trees, scores candidate replacement selectors using element attributes, accessibility tags, and Ollama reasoning, and automatically heals failed Playwright test actions on the fly.",
-    image: "/projects/self-healing-agent.svg",
-    technologies: [
-      "Python",
-      "Playwright",
-      "Streamlit",
-      "Ollama",
-      "Pytest",
-      "SQLite",
-    ],
-    github: "https://github.com/Ayyappanmj/self-healing-automation-agent.git",
-    demo: "https://self-healing-automation-agent.onrender.com",
-  },
-  {
-    title: "Real-Time Fraud Detection API",
-    category: "Data Science / ML",
-    description:
-      "Anomaly detection machine learning model identifying fraudulent financial transactions in real time. Deployed with a high-performance FastAPI REST API for sub-10ms transaction scoring with structured Pydantic validation, containerized with Docker, and monitored via an interactive Streamlit dashboard.",
-    image: "/projects/fraud-detection.svg",
-    technologies: [
-      "Python",
-      "Scikit-learn",
-      "Pandas",
-      "NumPy",
-      "FastAPI",
-      "Docker",
-      "Streamlit",
-    ],
-    github: "https://github.com/Ayyappanmj/fraud-detection-api.git",
-    demo: "https://fraud-detection-api-dashboard.onrender.com",
-  },
-  {
-    title: "Predictive Maintenance MLOps System",
-    category: "Data Science / ML",
-    description:
-      "Machine learning pipeline analyzing industrial sensor time-series data to predict potential equipment failures before downtime occurs. Implements feature engineering, data-drift monitoring, and automated model retraining using GitHub Actions CI/CD to maintain continuous reliability.",
-    image: "/projects/predictive-maintenance.svg",
+      "End-to-end IPL sports analytics platform using historical Cricsheet data to engineer player features, cluster roles with K-Means, and predict future performance with ML. Features Supabase PostgreSQL storage with 500 MB budget safeguards, transparent player valuation, and an interactive Streamlit squad optimization simulator.",
+    image: "/projects/ipl-auction.svg",
     technologies: [
       "Python",
       "Pandas",
-      "NumPy",
       "Scikit-learn",
-      "Time-Series Analysis",
-      "GitHub Actions",
-      "MLOps",
-    ],
-    github: "https://github.com/Ayyappanmj/predictive-maintenance-mlops.git",
-    demo: "https://predictive-maintenance-dashboard-tsjb.onrender.com",
-  },
-  {
-    title: "Full-Stack Real-Time Chat Application",
-    category: "Full Stack",
-    description:
-      "Full-stack real-time messaging application with instant bi-directional Socket.IO communication, JWT authentication, and live online user presence. Built with the MERN stack, Zustand global state management, responsive Tailwind CSS & DaisyUI, and free cloud deployment.",
-    image: "/projects/realtimechat.png",
-    technologies: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Socket.IO",
-      "Zustand",
-      "Tailwind CSS",
-      "JWT",
-    ],
-    github: "https://github.com/Ayyappanmj/fullstack-realchat-app",
-    demo: "https://fullstack-realchat-app.onrender.com",
-  },
-  {
-    title: "AI Resume Analyzer & ATS Scorer",
-    category: "AI Agents",
-    description:
-      "AI-powered resume analyzer that parses PDF/DOCX resumes and extracts skills, education, and work experience using NLP. Implements ATS-style scoring and job description matching using TF-IDF cosine similarity and LLM evaluation to pinpoint missing keywords and skill gaps.",
-    image: "/projects/ai-resume-analyzer.svg",
-    technologies: [
-      "Python",
-      "FastAPI",
       "Streamlit",
-      "spaCy",
-      "Scikit-learn",
-      "Ollama",
-      "TF-IDF",
+      "Supabase",
+      "PostgreSQL",
+      "Cricsheet API"
     ],
-    github: "https://github.com/Ayyappanmj/ai-resume-analyzer.git",
-    demo: "https://ai-resume-analyzer-gxbr.onrender.com",
+    github: "https://github.com/Ayyappanmj/ipl-auction-predictive-optimization.git",
   },
   {
     title: "E-Commerce Customer Churn & Retention Analytics",
@@ -511,144 +588,313 @@ export const projects = [
       "End-to-end customer churn analytics pipeline across 5,000 subscription customers. Authored 41 advanced SQL queries (CTEs, window functions, cohort retention, CLV), designed a 3-page interactive Power BI dashboard with DAX measures, and validated logic with 33 automated pytest test suites.",
     image: "/projects/ecommerce-churn.svg",
     technologies: [
-      "Python",
-      "SQL (SQLite)",
-      "Pandas",
+      "SQL",
+      "PostgreSQL",
       "Power BI",
-      "DAX",
+      "Python",
       "Pytest",
-      "Cohort Analysis",
+      "DAX",
+      "Cohort Analysis"
     ],
     github: "https://github.com/Ayyappanmj/ecommerce-churn-retention-analytics.git",
-    demo: "https://github.com/Ayyappanmj/ecommerce-churn-retention-analytics.git",
   },
-  {
-    title: "Sleep Detection Alarm System",
-    category: "Computer Vision",
-    description:
-      "A real-time AI-powered drowsiness detection system that monitors eye movements using a webcam. Built with OpenCV and MediaPipe to calculate Eye Aspect Ratio (EAR) and trigger an alarm when prolonged eye closure is detected, helping prevent fatigue-related accidents.",
-    image: "/projects/sleepdetect.png",
-    technologies: ["Python", "OpenCV", "MediaPipe", "NumPy", "Pygame"],
-    github: "https://github.com/Ayyappanmj/Sleep-detection-alarm.git",
-    demo: "https://github.com/Ayyappanmj/Sleep-detection-alarm.git",
-  },
-  {
-    title: "DoomScrolling Stop",
-    category: "Computer Vision",
-    description:
-      "An AI-powered desktop application that monitors prolonged screen usage using MediaPipe and OpenCV. The system detects user presence through a webcam and provides timely break reminders to reduce excessive doomscrolling.",
-    image: "/projects/doomscrolling.png",
-    technologies: ["Python", "OpenCV", "MediaPipe", "NumPy"],
-    github: "https://github.com/Ayyappanmj/doomscrolling-.git",
-    demo: "https://github.com/Ayyappanmj/doomscrolling-.git",
-  },
-  {
-    title: "Smart Attendance System",
-    category: "Computer Vision",
-    description:
-      "An AI-powered facial recognition attendance system that automatically detects and recognizes registered users through a webcam using OpenCV and the LBPH Face Recognizer, logging attendance records with timestamps.",
-    image: "/projects/smartattendece.png",
-    technologies: ["Python", "OpenCV", "OpenCV Contrib", "Tkinter", "NumPy", "Pillow"],
-    github: "https://github.com/Ayyappanmj/Smart-Attendance-System.git",
-    demo: "https://github.com/Ayyappanmj/Smart-Attendance-System.git",
-  },
-];
 
-export const services = [
+  // ==========================================
+  // FULL-STACK & MOBILE
+  // ==========================================
   {
-    title: "Backend & API Architecture",
+    title: "FieldOps – Offline-First Field Inspection & Incident Response Platform",
+    category: "Full-Stack & Mobile",
     description:
-      "High-throughput FastAPI, Node.js, and Next.js services featuring JWT/RBAC, Redis Lua rate limiters, and normalized PostgreSQL/MySQL schemas.",
+      "Built an offline-first field operations system featuring a Flutter/Drift mobile app, FastAPI/PostGIS backend, and Next.js WebSocket live operations dashboard. Implements UUID-idempotent offline sync with optimistic concurrency control, Leaflet geospatial technician/asset tracking, Ollama-assisted incident triage, and JWT refresh-token reuse detection.",
+    image: "/projects/fieldops.svg",
+    technologies: [
+      "Flutter",
+      "Dart",
+      "Next.js",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "PostgreSQL / PostGIS",
+      "Redis",
+      "Celery",
+      "WebSockets",
+      "Ollama"
+    ],
+    github: "https://github.com/Ayyappanmj/FieldOps",
   },
   {
-    title: "AI Agents & RAG Systems",
+    title: "Vaultly – Smart Receipt, Warranty & Subscription Vault",
+    category: "Full-Stack & Mobile",
     description:
-      "Autonomous multi-agent workflows, LangChain systems, hybrid FAISS/BM25 retrieval, and private local inference with Ollama.",
+      "Developed an offline-first personal asset and receipt management platform combining a Flutter mobile app, Next.js analytics dashboard, and FastAPI/Celery backend. Integrates OpenCV and Tesseract OCR for automated receipt extraction, warranty expiration tracking, Largest Remainder household expense splitting, and idempotent background sync.",
+    image: "/projects/vaultly.svg",
+    technologies: [
+      "Flutter",
+      "Dart",
+      "Next.js",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis",
+      "Celery",
+      "OpenCV",
+      "Tesseract",
+      "Pytest"
+    ],
+    github: "https://github.com/Ayyappanmj/Vaultly",
   },
   {
-    title: "Data Engineering & Analytics",
+    title: "Real-Time Chat Application",
+    category: "Full-Stack & Mobile",
     description:
-      "End-to-end ETL pipelines, MySQL/PostgreSQL data warehousing, advanced SQL (CTEs, window functions), and executive Power BI dashboards with DAX.",
+      "Full-stack real-time messaging application with instant bi-directional Socket.IO communication, JWT authentication, and live online user presence. Built with the MERN stack, Zustand global state management, responsive Tailwind CSS, and cloud deployment.",
+    image: "/projects/realtimechat.png",
+    technologies: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Socket.IO",
+      "Zustand",
+      "Tailwind CSS"
+    ],
+    github: "https://github.com/Ayyappanmj/chat-app.git",
+    demo: "https://chat-app-mern-prod.onrender.com",
+  },
+
+  // ==========================================
+  // DEVOPS & IT SYSTEMS
+  // ==========================================
+  {
+    title: "CloudPilot – Cloud-Native CI/CD & GitOps Deployment Platform",
+    category: "DevOps & IT Systems",
+    description:
+      "Architected an end-to-end GitOps delivery platform automating builds from Git commits to monitored Kubernetes clusters. Configured GitHub Actions with Trivy security scanning, immutable GHCR image tagging, Argo CD continuous synchronization, Terraform namespace/security provisioning, Helm charts, Prometheus/Grafana alerting, and documented failure-recovery drills.",
+    image: "/projects/cloudpilot.svg",
+    technologies: [
+      "GitHub Actions",
+      "Docker",
+      "Kubernetes",
+      "Helm",
+      "Terraform",
+      "Argo CD",
+      "Trivy",
+      "Prometheus",
+      "Grafana",
+      "Bash"
+    ],
+    github: "https://github.com/Ayyappanmj/cloudpilot.git",
   },
   {
-    title: "MLOps & Automated Testing",
+    title: "AutoOps – Linux Infrastructure Automation & Continuous Compliance Platform",
+    category: "DevOps & IT Systems",
     description:
-      "Comprehensive test suites (pytest/unittest, TDD), performance profiling (cProfile, timeit), Docker containerization, and GitHub Actions CI/CD.",
+      "Developed an automated Linux configuration management and compliance auditing platform using Python and Ansible. Enforces SSH hardening, firewall baselines, and package policies with lockout safeguards, paired with a configuration drift detection engine, CIS-aligned severity auditing, SHA-256 config backups, and Pytest/GitHub Actions validation.",
+    image: "/projects/autoops.svg",
+    technologies: [
+      "Python",
+      "Ansible",
+      "Linux",
+      "Bash",
+      "YAML",
+      "Pytest",
+      "GitHub Actions"
+    ],
+    github: "https://github.com/Ayyappanmj/autoops-linux-infrastructure-automation.git",
+  },
+  {
+    title: "Enterprise Active Directory & Identity Lifecycle Lab",
+    category: "DevOps & IT Systems",
+    description:
+      "Designed and deployed an enterprise Active Directory Domain Services (AD DS) lab on Windows Server 2022. Automated bulk Joiner-Mover-Leaver (JML) user lifecycles and quarantine offboarding with PowerShell, enforced AGDLP role-based NTFS/SMB access governance, linked security-hardening GPOs, built stale-account auditing scripts, and documented 10 incident runbooks (Event IDs 4740/4625, DNS, secure channels).",
+    image: "/projects/enterprise-ad.svg",
+    technologies: [
+      "Windows Server 2022",
+      "Active Directory (AD DS)",
+      "PowerShell",
+      "Group Policy (GPO)",
+      "RBAC / AGDLP",
+      "DNS / NTFS",
+      "IAM Auditing"
+    ],
+    github: "https://github.com/Ayyappanmj/Enterprise-ActiveDirectory-Lab",
+  },
+  {
+    title: "HelpDeskPro – Enterprise IT Support & Ticket Management Lab",
+    category: "DevOps & IT Systems",
+    description:
+      "Configured an ITIL-aligned service desk environment on osTicket (Apache/MySQL) supporting 4 departments, tiered L1/L2 escalation workflows, and Critical-to-Low SLA policies. Authored 15 technical Knowledge Base SOPs, documented 20 enterprise incident scenarios (AD, DNS/DHCP, VPN, Windows/Linux diagnostics), and built a Python CLI analytics engine tracking SLA compliance and recurring problem patterns.",
+    image: "/projects/helpdeskpro.svg",
+    technologies: [
+      "osTicket",
+      "Python",
+      "MySQL / MariaDB",
+      "Apache",
+      "ITIL / ITSM",
+      "PowerShell / CMD",
+      "Linux CLI",
+      "Mermaid.js"
+    ],
+    github: "https://github.com/Ayyappanmj/helpdesk-analytics-osTicket.git",
+  },
+  {
+    title: "Self-Healing DevOps CI/CD Agent",
+    category: "DevOps & IT Systems",
+    description:
+      "Autonomous DevOps assistant monitoring CI/CD pipeline failures in GitHub Actions. Parses build error logs, queries repository codebase context, identifies root-cause errors (dependency conflicts, syntax errors, failing tests), and creates pull requests with automated fixes.",
+    image: "/projects/self-healing-agent.svg",
+    technologies: [
+      "Python",
+      "GitHub Actions API",
+      "Docker",
+      "FastAPI",
+      "GitPython",
+      "LangChain",
+      "Ollama"
+    ],
+    github: "https://github.com/Ayyappanmj/self-healing-devops-cicd-agent.git",
   },
 ];
 
 export const skillGroups = [
   {
-    category: "Languages & Core",
-    icon: FaCode,
-    skills: [
-      { name: "Python (OOP, Profiling)", level: 95 },
-      { name: "Advanced SQL (CTEs, Window Functions)", level: 90 },
-      { name: "TypeScript / JavaScript", level: 86 },
-      { name: "HTML5 / CSS3 / Tailwind", level: 90 },
-    ],
-  },
-  {
-    category: "AI, Agents & RAG",
+    category: "AI, Agents & LLM Engineering",
     icon: FaBrain,
+    description: "Multi-agent workflows, autonomous reasoning loops, hybrid retrieval & MCP integration.",
     skills: [
-      { name: "LangChain & CrewAI", level: 90 },
-      { name: "FAISS & BM25 Hybrid Retrieval", level: 88 },
-      { name: "Local LLMs (Ollama) & Prompt Eng.", level: 92 },
-      { name: "spaCy / NLP & Scikit-learn", level: 85 },
+      "Model Context Protocol (MCP)",
+      "Amazon Bedrock (Claude 3.5 Sonnet / Haiku)",
+      "LangChain",
+      "CrewAI",
+      "FAISS & BM25 Hybrid Retrieval",
+      "Ollama",
+      "Prompt Engineering",
+      "Guardrails & Pydantic Schemas",
+      "Scikit-learn",
+      "NLP"
     ],
   },
   {
-    category: "Data Engineering & BI",
-    icon: FaChartLine,
-    skills: [
-      { name: "Pandas & NumPy", level: 92 },
-      { name: "Power BI (DAX, Modeling)", level: 88 },
-      { name: "MySQL & PostgreSQL DWH", level: 90 },
-      { name: "Supabase & SQLite ETL", level: 88 },
-    ],
-  },
-  {
-    category: "Backend & Systems",
+    category: "Backend & Distributed Systems",
     icon: FaServer,
+    description: "Transaction orchestration, outbox messaging, event streaming & low-latency caching.",
     skills: [
-      { name: "FastAPI & REST APIs", level: 92 },
-      { name: "Redis & Lua Rate Limiting", level: 88 },
-      { name: "Next.js & React.js", level: 88 },
-      { name: "Socket.IO & Node.js", level: 84 },
+      "Python (OOP, cProfile)",
+      "FastAPI",
+      "RabbitMQ",
+      "Kafka / Redpanda",
+      "Redis & Lua Scripting",
+      "WebSockets",
+      "Node.js",
+      "REST APIs",
+      "Celery"
     ],
   },
   {
-    category: "Testing, DevOps & MLOps",
-    icon: FaVial,
+    category: "Data Engineering & Warehousing",
+    icon: FaDatabase,
+    description: "Lakehouse pipelines, schema enforcement gates, star-schema modeling & analytics.",
     skills: [
-      { name: "Pytest & TDD Architecture", level: 92 },
-      { name: "GitHub Actions CI/CD", level: 88 },
-      { name: "Docker & Docker Compose", level: 85 },
-      { name: "Playwright & Profiling (cProfile)", level: 86 },
+      "PySpark",
+      "DuckDB",
+      "dbt Core",
+      "Apache Airflow",
+      "PostgreSQL / PostGIS",
+      "MySQL DWH",
+      "Parquet",
+      "Pandera",
+      "Pandas & NumPy",
+      "Power BI (DAX)",
+      "Supabase & SQLite"
+    ],
+  },
+  {
+    category: "Frontend & Mobile",
+    icon: FaCode,
+    description: "Type-safe web applications, offline-first mobile clients & analytics dashboards.",
+    skills: [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Flutter",
+      "Dart",
+      "Riverpod",
+      "Streamlit"
+    ],
+  },
+  {
+    category: "DevOps, Cloud & IT Infrastructure",
+    icon: FaCloud,
+    description: "GitOps delivery, container sandboxing, infrastructure as code & enterprise identity.",
+    skills: [
+      "Docker & Docker Compose",
+      "Kubernetes (Kind)",
+      "Helm",
+      "Terraform",
+      "Argo CD",
+      "GitHub Actions CI/CD",
+      "Prometheus & Grafana",
+      "Ansible",
+      "Windows Server / Active Directory (GPO, RBAC)",
+      "PowerShell",
+      "Linux Admin",
+      "ITSM / osTicket",
+      "Trivy",
+      "Pytest & TDD",
+      "Playwright"
     ],
   },
 ];
 
-export const heroHighlights = [
-  "Production API Gateways & Token-Bucket Rate Limiting",
-  "Autonomous AI Agents & Hybrid RAG Retrieval",
-  "Enterprise Data Pipelines, Advanced SQL & Power BI",
+export const services = [
+  {
+    title: "Distributed Systems & API Architecture",
+    description:
+      "High-throughput FastAPI, Node.js, and Next.js backends featuring JWT/RBAC, transactional outbox over RabbitMQ/Kafka, and Redis Lua rate limiting.",
+  },
+  {
+    title: "Autonomous AI Agents & RAG Systems",
+    description:
+      "Model Context Protocol (MCP) integrations, Amazon Bedrock & Claude reasoning loops, hybrid FAISS/BM25 retrieval, and local inference with Ollama.",
+  },
+  {
+    title: "Data Engineering & Lakehouses",
+    description:
+      "End-to-end lakehouses with PySpark, DuckDB, dbt Core, Pandera schema validation gates, star-schema data warehouses, and Power BI DAX modeling.",
+  },
+  {
+    title: "DevOps, GitOps & IT Infrastructure",
+    description:
+      "Automated CI/CD with GitHub Actions and Trivy, Argo CD Kubernetes synchronization, Ansible configuration hardening, and Active Directory identity management.",
+  },
 ];
 
 export const testimonials = [
+  {
+    name: "Engineering Lead",
+    role: "Open Source Collaboration",
+    image: "/avatar1.png",
+    rating: 5,
+    quote:
+      "Exceptional architecture and disciplined engineering. Built reliable distributed workflows with comprehensive automated test coverage and clean documentation.",
+  },
   {
     name: "Technical Mentor",
     role: "Yuva Intern Mentorship",
     image: "/avatar1.png",
     rating: 5,
-    text: "Ayyappan demonstrated exceptional software engineering discipline, mastering modular architecture, systematic cProfile optimization, and rigorous pytest test suites.",
+    quote:
+      "Strong foundation in Python engineering, performance profiling, and TDD. Delivered resilient CLI tools and CI/CD pipelines ahead of schedule.",
   },
   {
     name: "Programme Coordinator",
     role: "K-DISC & GTech Initiative",
     image: "/avatar1.png",
     rating: 5,
-    text: "Demonstrated exemplary problem-solving and rapid prototyping abilities during the Young Innovators Programme, showing strong technical dedication.",
+    quote:
+      "Demonstrated remarkable problem-solving and innovation in the Young Innovators Programme, producing high-quality prototypes addressing complex requirements.",
   },
 ];

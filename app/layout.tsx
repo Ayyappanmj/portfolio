@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 // @ts-ignore: allow side-effect CSS import without type declarations
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
@@ -8,41 +8,46 @@ import ScrollProgress from "@/components/layout/ScrollProgress";
 import ScrollToTop from "@/components/layout/ScrollToTop";
 import CustomCursor from "@/components/layout/CustomCursor";
 import LoadingScreen from "@/components/layout/LoadingScreen";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap"
 });
-const poppins = Poppins({
+
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-poppins",
+  variable: "--font-mono",
   display: "swap"
 });
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "AYYAPPAN M | Software Engineer & AI / Data Systems Developer",
+    default: "AYYAPPAN M | Software Engineer & AI / Distributed Systems Developer",
     template: "%s | AYYAPPAN M"
   },
   description:
-    "Professional portfolio of AYYAPPAN M, a software engineer specializing in Python, AI agents, full-stack systems, and enterprise data analytics.",
+    "Professional portfolio of AYYAPPAN M, a software engineer specializing in Python, AI agents, distributed systems, and enterprise data analytics pipelines.",
   keywords: [
-    "Software Developer",
+    "Software Engineer",
+    "Distributed Systems",
+    "AI Agents",
+    "Data Engineering",
     "Full Stack Developer",
-    "Next.js Developer",
-    "React Developer",
+    "Python",
     "TypeScript",
+    "Next.js",
     "Portfolio"
   ],
   authors: [{ name: "AYYAPPAN M" }],
   creator: "AYYAPPAN M",
   openGraph: {
-    title: "AYYAPPAN M | Full Stack Software Developer",
+    title: "AYYAPPAN M | Software Engineer & AI / Distributed Systems Developer",
     description:
-      "Premium developer portfolio showcasing projects, skills, experience, services, and contact information.",
+      "Minimalist, production-grade portfolio showcasing distributed systems, AI agents, data engineering pipelines, and certifications.",
     url: siteUrl,
     siteName: "AYYAPPAN M Portfolio",
     images: [
@@ -58,28 +63,30 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AYYAPPAN M | Full Stack Software Developer",
+    title: "AYYAPPAN M | Software Engineer",
     description:
-      "Full stack software developer portfolio built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.",
+      "Minimalist engineering portfolio showcasing distributed systems, AI agents, data pipelines, and infrastructure.",
     images: ["/avatar.png"]
   },
   icons: {
     icon: "/favicon.ico"
   }
 };
+
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#020617"
+  themeColor: "#09090B"
 };
+
 export default function RootLayout({
   children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${poppins.variable} font-inter`}>
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans bg-[#09090B] text-[#FAFAFA] antialiased selection:bg-zinc-800 selection:text-white`}>
         <ThemeProvider>
           <LoadingScreen />
           <ScrollProgress />

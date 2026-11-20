@@ -9,12 +9,12 @@ export default function Experience() {
   return (
     <SectionWrapper id="experience">
       <SectionHeading
-        eyebrow="Experience"
+        eyebrow="05 // EXPERIENCE"
         title="Real-world engineering impact."
-        description="A timeline of roles focused on shipping production software, improving performance, and building scalable systems."
+        description="A timeline of roles focused on shipping production software, automating testing pipelines, and building scalable systems."
       />
       <div className="relative mx-auto max-w-4xl">
-        <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-blue-500 via-purple-500 to-cyan-400 md:left-1/2" />
+        <div className="absolute left-4 top-0 h-full w-px bg-zinc-800 md:left-1/2" />
         <div className="space-y-10">
           {experiences.map((experience, index) => (
             <div
@@ -23,35 +23,36 @@ export default function Experience() {
                 index % 2 === 0 ? "" : "md:[&>article]:col-start-2"
               }`}
             >
-              <div className="absolute left-1 top-4 h-7 w-7 rounded-full border-4 border-slate-950 bg-cyan-400 shadow-glow md:left-1/2 md:-translate-x-1/2" />
-              <article className="glass ml-12 rounded-3xl p-6 md:ml-0">
-                <p className="text-sm font-bold text-cyan-400">{experience.duration}</p>
-                <h3 className="mt-2 font-poppins text-2xl font-bold">
+              <div className="absolute left-2.5 top-4 h-4 w-4 rounded-full border-2 border-zinc-950 bg-zinc-400 md:left-1/2 md:-translate-x-1/2" />
+              <article className="ml-10 rounded-2xl border border-[#27272A] bg-[#121215] p-6 transition duration-200 hover:border-[#3F3F46] md:ml-0">
+                <p className="font-mono text-xs font-semibold text-zinc-400">{experience.duration}</p>
+                <h3 className="mt-2 text-xl font-bold text-[#FAFAFA]">
                   {experience.role}
                 </h3>
-                <p className="mt-1 font-semibold text-muted">{experience.company}</p>
+                <p className="mt-1 font-mono text-xs text-zinc-500">{experience.company}</p>
                 {/* @ts-ignore */}
                 {experience.summary && (
-                  <p className="mt-4 rounded-2xl border border-cyan-400/20 bg-cyan-400/5 p-4 text-sm leading-6 text-slate-200">
+                  <p className="mt-4 rounded-xl border border-zinc-800/80 bg-zinc-900/50 p-4 text-xs leading-relaxed text-zinc-300">
                     {/* @ts-ignore */}
                     {experience.summary}
                   </p>
                 )}
-                <ul className="mt-5 space-y-3 text-muted">
+                <ul className="mt-4 space-y-2 text-xs leading-relaxed text-[#A1A1AA]">
                   {experience.responsibilities.map((item) => (
-                    <li key={item} className="leading-7">
-                      {item}
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="font-mono text-zinc-500">&gt;</span>
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
                 {/* @ts-ignore */}
                 {experience.skills && experience.skills.length > 0 && (
-                  <div className="mt-5 flex flex-wrap gap-2 border-t border-white/10 pt-4">
+                  <div className="mt-5 flex flex-wrap gap-1.5 border-t border-zinc-800/80 pt-4">
                     {/* @ts-ignore */}
                     {experience.skills.map((skill: string) => (
                       <span
                         key={skill}
-                        className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2.5 py-1 text-xs font-medium text-cyan-200"
+                        className="rounded border border-zinc-800 bg-zinc-900 px-2.5 py-1 font-mono text-[11px] text-zinc-300"
                       >
                         {skill}
                       </span>
@@ -60,10 +61,10 @@ export default function Experience() {
                 )}
                 {/* @ts-ignore */}
                 {experience.certificate && (
-                  <div className="mt-5 border-t border-white/10 pt-4">
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-2xl border border-cyan-400/20 bg-slate-950/40 p-3">
+                  <div className="mt-5 border-t border-zinc-800/80 pt-4">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-xl border border-zinc-800 bg-zinc-900/40 p-3">
                       <div className="flex items-center gap-3">
-                        <div className="relative h-12 w-16 overflow-hidden rounded-lg border border-white/10 shrink-0">
+                        <div className="relative h-12 w-16 overflow-hidden rounded-lg border border-zinc-800 shrink-0">
                           <Image
                             /* @ts-ignore */
                             src={experience.certificate}
@@ -73,8 +74,8 @@ export default function Experience() {
                           />
                         </div>
                         <div>
-                          <p className="text-xs font-semibold text-white">Verified Internship Certificate</p>
-                          <p className="text-[11px] text-muted">ID: µ2024032145 • K-DISC & GTech</p>
+                          <p className="text-xs font-semibold text-[#FAFAFA]">Verified Internship Certificate</p>
+                          <p className="font-mono text-[11px] text-zinc-500">ID: µ2024032145 • K-DISC &amp; GTech</p>
                         </div>
                       </div>
                       <Link
@@ -82,7 +83,7 @@ export default function Experience() {
                         href={experience.certificate}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-cyan-400/30 bg-cyan-400/10 px-3 py-1.5 text-xs font-semibold text-cyan-300 transition hover:bg-cyan-400 hover:text-slate-950 self-start sm:self-auto"
+                        className="focus-ring inline-flex items-center justify-center gap-1.5 rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-1.5 font-mono text-xs font-medium text-zinc-200 transition hover:bg-zinc-800 hover:text-white self-start sm:self-auto"
                       >
                         <FaCertificate className="text-xs" />
                         <span>View Certificate</span>

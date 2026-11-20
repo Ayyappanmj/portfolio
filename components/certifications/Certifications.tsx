@@ -10,9 +10,9 @@ export default function Certifications() {
   return (
     <SectionWrapper id="certifications">
       <SectionHeading
-        eyebrow="Certifications"
-        title="Industry credentials and verified job simulations."
-        description="Formal certifications and practical industry simulations across AI, full-stack engineering, and scientific computing."
+        eyebrow="04 // CERTIFICATIONS"
+        title="Industry credentials and verified engineering simulations."
+        description="Formal certifications and practical industry simulations across QA automation, AI systems, full-stack engineering, and cloud platforms."
       />
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {certifications.map((certificate) => {
@@ -20,11 +20,11 @@ export default function Certifications() {
           return (
             <article
               key={certificate.name}
-              className="glass group flex flex-col justify-between overflow-hidden rounded-3xl border border-white/10 bg-slate-900/60 p-6 transition hover:-translate-y-2 hover:border-cyan-400/30 hover:shadow-glow"
+              className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-[#27272A] bg-[#121215] p-6 transition duration-200 hover:border-[#3F3F46]"
             >
               <div>
                 {certificate.image ? (
-                  <div className="relative mb-5 h-48 w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-950/60">
+                  <div className="relative mb-5 h-44 w-full overflow-hidden rounded-xl border border-zinc-800 bg-zinc-950">
                     <Image
                       src={certificate.image}
                       alt={`${certificate.name} certificate`}
@@ -33,45 +33,44 @@ export default function Certifications() {
                       className="object-cover transition duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#121215] via-transparent to-transparent opacity-60" />
                   </div>
                 ) : (
-                  <div className="mb-5 inline-flex rounded-2xl bg-cyan-400/10 p-4 text-3xl text-cyan-400">
+                  <div className="mb-5 inline-flex rounded-xl border border-zinc-800 bg-zinc-900/60 p-3 text-2xl text-zinc-400">
                     <FaCertificate />
                   </div>
                 )}
                 <div className="flex items-center justify-between gap-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-cyan-400">
+                  <span className="font-mono text-xs font-semibold uppercase tracking-wider text-zinc-400">
                     {certificate.issuer}
                   </span>
                   {certificate.date && (
-                    <span className="flex items-center gap-1 text-xs text-muted">
+                    <span className="flex items-center gap-1 font-mono text-xs text-zinc-500">
                       <FaCalendarDays className="text-[10px]" /> {certificate.date}
                     </span>
                   )}
                 </div>
-                <h3 className="mt-2 font-poppins text-lg font-bold text-white group-hover:text-cyan-300 transition">
+                <h3 className="mt-2.5 text-lg font-bold text-[#FAFAFA] transition group-hover:text-white">
                   {certificate.name}
                 </h3>
                 {certificate.tasks && (
-                  <p className="mt-2 text-xs leading-5 text-slate-300">
+                  <p className="mt-2 text-xs leading-relaxed text-[#A1A1AA]">
                     {certificate.tasks}
                   </p>
                 )}
               </div>
-              <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
+              <div className="mt-6 flex items-center justify-between border-t border-zinc-800/80 pt-4">
                 {isUrl ? (
                   <Link
                     href={certificate.verify}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="focus-ring inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-xs font-semibold text-cyan-300 transition hover:bg-cyan-400 hover:text-slate-950"
+                    className="focus-ring inline-flex items-center gap-1.5 rounded-lg border border-zinc-800 bg-zinc-900 px-3.5 py-1.5 font-mono text-xs font-medium text-zinc-200 transition hover:bg-zinc-800 hover:text-white"
                   >
-                    <span>Verify Credential</span>
-                    <FaArrowUpRightFromSquare className="text-[10px]" />
+                    <span>Verify Credential ↗</span>
                   </Link>
                 ) : (
-                  <span className="text-xs font-medium text-slate-400">
+                  <span className="font-mono text-xs text-zinc-500">
                     {certificate.verify}
                   </span>
                 )}
@@ -80,7 +79,7 @@ export default function Certifications() {
                     href={certificate.image}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs text-muted transition hover:text-cyan-300"
+                    className="font-mono text-xs text-zinc-500 transition hover:text-zinc-300"
                   >
                     View Full
                   </Link>

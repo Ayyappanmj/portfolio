@@ -5,25 +5,30 @@ import { FaEnvelope, FaLocationDot, FaPhone } from "react-icons/fa6";
 import SectionHeading from "@/components/shared/SectionHeading";
 import SectionWrapper from "@/components/shared/SectionWrapper";
 import { profile } from "@/data/portfolio";
+
 export default function Contact() {
   const formId = process.env.NEXT_PUBLIC_FORMSPREE_ID || "xnjkwdrr";
   const [state, handleSubmit] = useForm(formId);
+
   return (
     <SectionWrapper id="contact">
       <SectionHeading
-        eyebrow="Contact"
-        title="Let us build something exceptional."
-        description="Reach out for software engineering, AI/ML, and data analytics opportunities or technical collaboration."
+        eyebrow="08 // CONTACT"
+        title="Initiate technical collaboration."
+        description="Reach out for full-time software engineering roles, distributed systems design, or AI engineering projects."
       />
       <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="glass rounded-3xl p-8">
-          <h3 className="font-poppins text-2xl font-bold">Contact Information</h3>
-          <div className="mt-8 space-y-5">
+        <div className="rounded-2xl border border-[#27272A] bg-[#121215] p-8 transition hover:border-[#3F3F46]">
+          <h3 className="text-xl font-bold text-[#FAFAFA]">Contact Information</h3>
+          <p className="mt-2 text-xs leading-relaxed text-[#A1A1AA]">
+            Direct channels for opportunities, code evaluations, or architectural discussions.
+          </p>
+          <div className="mt-8 space-y-4">
             <ContactItem icon={<FaEnvelope />} label="Email" value={profile.email} />
             <ContactItem icon={<FaPhone />} label="Phone" value={profile.phone} />
             <ContactItem icon={<FaLocationDot />} label="Location" value={profile.location} />
           </div>
-          <div className="mt-8 flex gap-4">
+          <div className="mt-8 flex gap-3">
             {profile.socials.map((social) => {
               const Icon = social.icon;
               return (
@@ -32,26 +37,27 @@ export default function Contact() {
                   href={social.href}
                   target="_blank"
                   aria-label={social.label}
-                  className="focus-ring rounded-full border border-white/10 p-4 text-xl transition hover:border-cyan-400 hover:text-cyan-400"
+                  className="focus-ring rounded-lg border border-zinc-800 bg-zinc-900/60 p-3 text-base text-zinc-400 transition hover:border-zinc-600 hover:text-white"
                 >
                   <Icon />
                 </Link>
               );
             })}
           </div>
-          <div className="mt-8 overflow-hidden rounded-3xl border border-white/10">
+          <div className="mt-8 overflow-hidden rounded-xl border border-zinc-800">
             <iframe
               title="Google Map Location"
               src="https://www.google.com/maps?q=India&amp;output=embed"
-              className="h-64 w-full"
+              className="h-56 w-full grayscale contrast-125 opacity-80"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
         </div>
+
         <form
           onSubmit={handleSubmit}
-          className="glass rounded-3xl p-8"
+          className="rounded-2xl border border-[#27272A] bg-[#121215] p-8 transition hover:border-[#3F3F46]"
           aria-label="Contact form"
         >
           <div className="grid gap-5 sm:grid-cols-2">
@@ -59,36 +65,36 @@ export default function Contact() {
             <Input label="Email" name="email" type="email" placeholder="you@example.com" required />
           </div>
           <div className="mt-5">
-            <Input label="Subject" name="subject" placeholder="Project inquiry" required />
+            <Input label="Subject" name="subject" placeholder="Role or project inquiry" required />
           </div>
           <div className="mt-5">
-            <label htmlFor="message" className="mb-2 block text-sm font-semibold">
+            <label htmlFor="message" className="mb-2 block font-mono text-xs uppercase tracking-wider text-zinc-400">
               Message
             </label>
             <textarea
               id="message"
               name="message"
               required
-              rows={7}
-              placeholder="Tell me about your project..."
-              className="focus-ring w-full resize-none rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-foreground placeholder:text-muted transition focus:border-cyan-400"
+              rows={6}
+              placeholder="Provide context regarding the engineering position or technical scope..."
+              className="focus-ring w-full resize-none rounded-xl border border-zinc-800 bg-zinc-900/50 px-4 py-3 text-sm text-[#FAFAFA] placeholder:text-zinc-600 transition focus:border-zinc-500"
             />
           </div>
           <button
             type="submit"
             disabled={state.submitting || !formId}
-            className="focus-ring mt-6 w-full rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-400 px-6 py-4 font-bold text-white shadow-glow transition hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-50"
+            className="focus-ring mt-6 w-full rounded-lg bg-[#FAFAFA] px-6 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-[#09090B] transition hover:bg-zinc-200 disabled:cursor-not-allowed disabled:opacity-50"
           >
-            {state.submitting ? "Sending..." : "Send Message"}
+            {state.submitting ? "Transmitting..." : "Send Message"}
           </button>
           {!formId ? (
-            <p className="mt-4 text-sm text-yellow-300">
-              Add your Formspree ID to `NEXT_PUBLIC_FORMSPREE_ID` to enable submissions.
+            <p className="mt-4 font-mono text-xs text-zinc-500">
+              Set NEXT_PUBLIC_FORMSPREE_ID to enable automated form delivery.
             </p>
           ) : null}
           {state.succeeded ? (
-            <p className="mt-4 text-sm text-cyan-300">
-              Message sent successfully. I will reply soon.
+            <p className="mt-4 font-mono text-xs text-emerald-400">
+              Message transmitted successfully. I will follow up shortly.
             </p>
           ) : null}
         </form>
@@ -96,6 +102,7 @@ export default function Contact() {
     </SectionWrapper>
   );
 }
+
 function ContactItem({
   icon,
   label,
@@ -106,21 +113,24 @@ function ContactItem({
   value: string;
 }) {
   return (
-    <div className="flex items-center gap-4 rounded-2xl border border-white/10 p-4">
-      <div className="text-xl text-cyan-400">{icon}</div>
+    <div className="flex items-center gap-4 rounded-xl border border-zinc-800/80 bg-zinc-900/40 p-4">
+      <div className="rounded-lg border border-zinc-800 bg-zinc-900 p-2.5 text-zinc-400">
+        {icon}
+      </div>
       <div>
-        <p className="text-sm text-muted">{label}</p>
-        <p className="font-semibold">{value}</p>
+        <p className="font-mono text-xs uppercase tracking-wider text-zinc-500">{label}</p>
+        <p className="text-sm font-semibold text-[#FAFAFA]">{value}</p>
       </div>
     </div>
   );
 }
+
 function Input({
   label,
   name,
   type = "text",
   placeholder,
-  required = false
+  required
 }: {
   label: string;
   name: string;
@@ -130,16 +140,16 @@ function Input({
 }) {
   return (
     <div>
-      <label htmlFor={name} className="mb-2 block text-sm font-semibold">
+      <label htmlFor={name} className="mb-2 block font-mono text-xs uppercase tracking-wider text-zinc-400">
         {label}
       </label>
       <input
         id={name}
         name={name}
         type={type}
-        placeholder={placeholder}
         required={required}
-        className="focus-ring w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-foreground placeholder:text-muted transition focus:border-cyan-400"
+        placeholder={placeholder}
+        className="focus-ring w-full rounded-xl border border-zinc-800 bg-zinc-900/50 px-4 py-3 text-sm text-[#FAFAFA] placeholder:text-zinc-600 transition focus:border-zinc-500"
       />
     </div>
   );
