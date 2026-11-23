@@ -3,8 +3,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { AnimatePresence, motion } from "framer-motion";
-import { FaBars, FaMoon, FaSun, FaXmark } from "react-icons/fa6";
-import { navLinks } from "@/data/portfolio";
+import { FaBars, FaGithub, FaLinkedin, FaMoon, FaSun, FaXmark } from "react-icons/fa6";
+import { navLinks, profile } from "@/data/portfolio";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -19,13 +19,18 @@ export default function Navbar() {
     <header className="fixed left-0 right-0 top-4 z-50 px-4">
       <nav
         aria-label="Main navigation"
-        className="mx-auto flex max-w-7xl items-center justify-between rounded-xl border border-[#27272A] bg-[#121215]/90 px-5 py-3 backdrop-blur-md"
+        className="mx-auto flex max-w-7xl items-center justify-between rounded-xl border border-[#27272A] bg-[#121215]/90 px-5 py-3 backdrop-blur-md shadow-lg"
       >
-        <Link href="#home" className="focus-ring flex items-center gap-2.5 rounded-md font-sans text-lg font-bold text-[#FAFAFA]">
+        <Link
+          href="#home"
+          className="focus-ring flex items-center gap-2 rounded-md font-sans text-base font-bold tracking-tight text-[#FAFAFA]"
+        >
           <span className="font-mono text-sm text-zinc-500">&gt;</span>
-          <span>AYYAPPAN M</span>
+          <span>{profile.name}</span>
         </Link>
-        <div className="hidden items-center gap-8 md:flex">
+
+        {/* Desktop Nav Links */}
+        <div className="hidden items-center gap-6 lg:gap-8 md:flex">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -36,32 +41,63 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <div className="flex items-center gap-3">
+
+        {/* Right Action Icons & Status */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          {/* Availability Pill */}
           <div className="hidden sm:inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/60 px-3 py-1 font-mono text-xs text-zinc-300">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            <span>Available for roles</span>
+            <span>{profile.availability}</span>
           </div>
+
+          {/* GitHub Icon Link */}
+          <Link
+            href="https://github.com/Ayyappanmj"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub Profile"
+            className="focus-ring inline-flex rounded-lg border border-[#27272A] p-2 text-xs text-[#A1A1AA] transition hover:border-[#3F3F46] hover:text-[#FAFAFA]"
+          >
+            <FaGithub className="text-sm" />
+          </Link>
+
+          {/* LinkedIn Icon Link */}
+          <Link
+            href="https://www.linkedin.com/in/ayyappanmj"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
+            className="focus-ring inline-flex rounded-lg border border-[#27272A] p-2 text-xs text-[#A1A1AA] transition hover:border-[#3F3F46] hover:text-[#FAFAFA]"
+          >
+            <FaLinkedin className="text-sm" />
+          </Link>
+
+          {/* Theme Toggle */}
           <button
             type="button"
             aria-label="Toggle theme"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="focus-ring rounded-lg border border-[#27272A] p-2.5 text-xs text-[#A1A1AA] transition hover:border-[#3F3F46] hover:text-[#FAFAFA]"
+            className="focus-ring rounded-lg border border-[#27272A] p-2 text-xs text-[#A1A1AA] transition hover:border-[#3F3F46] hover:text-[#FAFAFA]"
           >
-            {mounted ? (theme === "dark" ? <FaSun /> : <FaMoon />) : <FaMoon />}
+            {mounted ? (theme === "dark" ? <FaSun className="text-sm" /> : <FaMoon className="text-sm" />) : <FaMoon className="text-sm" />}
           </button>
+
+          {/* Mobile Menu Toggle */}
           <button
             type="button"
             aria-label="Open navigation menu"
             onClick={() => setOpen((value) => !value)}
-            className="focus-ring rounded-lg border border-[#27272A] p-2.5 text-xs text-[#A1A1AA] transition hover:text-[#FAFAFA] md:hidden"
+            className="focus-ring rounded-lg border border-[#27272A] p-2 text-xs text-[#A1A1AA] transition hover:text-[#FAFAFA] md:hidden"
           >
-            {open ? <FaXmark /> : <FaBars />}
+            {open ? <FaXmark className="text-sm" /> : <FaBars className="text-sm" />}
           </button>
         </div>
       </nav>
+
+      {/* Mobile Menu Dropdown */}
       <AnimatePresence>
         {open ? (
           <motion.div
@@ -81,12 +117,35 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <div className="mt-2 pt-2 border-t border-zinc-800 flex items-center gap-2 px-3 py-1 font-mono text-xs text-zinc-300">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                </span>
-                <span>Available for roles</span>
+
+              <div className="mt-2 pt-3 border-t border-zinc-800 flex items-center justify-between px-2">
+                <div className="flex items-center gap-2 font-mono text-xs text-zinc-300">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                  </span>
+                  <span>{profile.availability}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Link
+                    href="https://github.com/Ayyappanmj"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub Profile"
+                    className="p-2 text-zinc-400 hover:text-white"
+                  >
+                    <FaGithub />
+                  </Link>
+                  <Link
+                    href="https://www.linkedin.com/in/ayyappanmj"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn Profile"
+                    className="p-2 text-zinc-400 hover:text-white"
+                  >
+                    <FaLinkedin />
+                  </Link>
+                </div>
               </div>
             </div>
           </motion.div>

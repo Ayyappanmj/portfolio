@@ -7,88 +7,114 @@ import Navbar from "@/components/layout/Navbar";
 import ScrollProgress from "@/components/layout/ScrollProgress";
 import ScrollToTop from "@/components/layout/ScrollToTop";
 import CustomCursor from "@/components/layout/CustomCursor";
-import LoadingScreen from "@/components/layout/LoadingScreen";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap"
+  display: "swap",
 });
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
-  display: "swap"
+  display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const siteUrl = "https://portfolio-ayyappanmj2004.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: {
-    default: "AYYAPPAN M | Software Engineer & AI / Distributed Systems Developer",
-    template: "%s | AYYAPPAN M"
-  },
+  title: "Ayyappan M | Portfolio",
   description:
-    "Professional portfolio of AYYAPPAN M, a software engineer specializing in Python, AI agents, distributed systems, and enterprise data analytics pipelines.",
+    "Portfolio of Ayyappan M: AI apps, data pipelines, backends and infrastructure projects with live demos and source code.",
   keywords: [
-    "Software Engineer",
-    "Distributed Systems",
-    "AI Agents",
-    "Data Engineering",
-    "Full Stack Developer",
+    "Ayyappan M",
+    "Portfolio",
+    "AI",
+    "Data Pipelines",
+    "Backend Systems",
+    "Infrastructure",
     "Python",
     "TypeScript",
     "Next.js",
-    "Portfolio"
   ],
-  authors: [{ name: "AYYAPPAN M" }],
-  creator: "AYYAPPAN M",
+  authors: [{ name: "Ayyappan M", url: siteUrl }],
+  creator: "Ayyappan M",
+  alternates: {
+    canonical: siteUrl,
+  },
   openGraph: {
-    title: "AYYAPPAN M | Software Engineer & AI / Distributed Systems Developer",
+    title: "Ayyappan M | Portfolio",
     description:
-      "Minimalist, production-grade portfolio showcasing distributed systems, AI agents, data engineering pipelines, and certifications.",
+      "Portfolio of Ayyappan M: AI apps, data pipelines, backends and infrastructure projects with live demos and source code.",
     url: siteUrl,
-    siteName: "AYYAPPAN M Portfolio",
+    siteName: "Ayyappan M | Portfolio",
     images: [
       {
-        url: "/avatar.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "AYYAPPAN M Portfolio"
-      }
+        alt: "Ayyappan M | Portfolio",
+      },
     ],
     locale: "en_US",
-    type: "website"
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AYYAPPAN M | Software Engineer",
+    title: "Ayyappan M | Portfolio",
     description:
-      "Minimalist engineering portfolio showcasing distributed systems, AI agents, data pipelines, and infrastructure.",
-    images: ["/avatar.png"]
+      "Portfolio of Ayyappan M: AI apps, data pipelines, backends and infrastructure projects with live demos and source code.",
+    images: ["/og-image.png"],
   },
   icons: {
-    icon: "/favicon.ico"
-  }
+    icon: "/favicon.ico",
+  },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#09090B"
+  themeColor: "#09090B",
 };
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Ayyappan M",
+    url: siteUrl,
+    sameAs: [
+      "https://github.com/Ayyappanmj",
+      "https://www.linkedin.com/in/ayyappanmj",
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: "Kerala",
+      addressCountry: "India",
+    },
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: "University College of Engineering, Kariyavattom",
+    },
+  };
+
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans bg-[#09090B] text-[#FAFAFA] antialiased selection:bg-zinc-800 selection:text-white`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans bg-[#09090B] text-[#FAFAFA] antialiased selection:bg-zinc-800 selection:text-white`}
+      >
         <ThemeProvider>
-          <LoadingScreen />
           <ScrollProgress />
           <CustomCursor />
           <Navbar />
